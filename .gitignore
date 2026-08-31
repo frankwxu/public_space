@@ -5,3 +5,6 @@
 *.log
 *.out
 *.synctex.gz
+
+# Local access credentials
+teaching/syllabi/password.txt

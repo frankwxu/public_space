@@ -1,4 +1,4 @@
-% Content-first syllabus template. Update the course details below for a new offering.
+% Content-first syllabus template.
 \documentclass[10pt]{article}
 \usepackage[letterpaper,top=0.7in,bottom=0.7in,left=0.85in,right=0.85in,headsep=0.18in]{geometry}
 \usepackage[T1]{fontenc}
@@ -25,20 +25,19 @@
 \titlespacing*{\section}{0pt}{1.35em}{0.4em}
 \titleformat{\subsection}{\large\bfseries\color{Accent}}{}{0pt}{}
 
-\newcommand{\coursecode}{CYFI 750/490}
-\newcommand{\coursename}{Forensic Incident Response/Capstone}
+\newcommand{\coursecode}{CYFI 725}
+\newcommand{\coursename}{Computer and Digital Forensics}
 \newcommand{\semester}{Fall 2026}
 \newcommand{\credits}{3 credits}
 \newcommand{\instructor}{Dr. Frank (Weifeng) Xu}
 \newcommand{\instructoremail}{wxu@ubalt.edu}
 \newcommand{\officehours}{By appointment}
 \newcommand{\classlocation}{BC 015 (in person); Zoom (online)}
+\newcommand{\zoomlink}{https://ubalt.zoom.us/s/5547149563}
 \newcommand{\officephone}{410-837-5302}
 \newcommand{\officelocation}{LAP 526}
 
-% Optional content fields. Leave a field empty to omit its section from the PDF.
-% Example: \renewcommand{\coursedescription}{This course introduces \ldots}
-\newcommand{\coursedescription}{This course integrates and applies the knowledge, theories, principles, skills, and practical applications learned in the Master of Science in Forensic Science---Cyber Investigations program to actual cybercrime case scenarios.\par\textbf{Lab fee:} Required.\par\textbf{Prerequisite:} Successful completion of all core courses in the program and permission from the program director.}
+\newcommand{\coursedescription}{This course examines fundamental principles and hands-on practices in computer and digital forensics. It examines the use of computer-forensic theories, techniques, and tools for the retrieval, recovery, authentication, and analysis of electronic data from file systems and memory, with extensive use of Windows and Linux command lines. Students reconstruct computer usage associated with cybercrimes.\par\textbf{Lab fee:} Required.\par\textbf{Prerequisite:} CYFI 620.}
 \newcommand{\prerequisites}{}
 \newcommand{\accessibilitystatement}{}
 \newcommand{\academicintegritystatement}{}
@@ -64,7 +63,6 @@
   {\large\color{Accent}\coursecode}
 \end{flushleft}
 
-
 \noindent{\color{gray!45}\rule{\textwidth}{0.4pt}}
 \vspace{0.45em}
 \begin{minipage}[t]{0.55\textwidth}
@@ -78,9 +76,8 @@
   {\large\bfseries Class Information}\par\smallskip
   \textbf{Credits:} \credits\\
   \textbf{Location:} \classlocation\\
-  \textbf{Zoom:} \href{https://ubalt.zoom.us/s/5547149563}{Join the online class}
+  \textbf{Zoom:} \href{\zoomlink}{Join the online class}
 \end{minipage}
-
 
 \noindent{\color{gray!45}\rule{\textwidth}{0.4pt}}
 
@@ -92,46 +89,37 @@
 The course meets every Thursday and is offered in two formats:
 
 \begin{itemize}
-  \item \textbf{Hybrid (HYB):} In-person attendance on campus is required on September 17 and October 1, 15, and 29; all remaining lectures will be held remotely via Zoom.
+  \item \textbf{Hybrid (HYB):} In-person attendance on campus is required on September 14, September 28, October 12, and October 26; all remaining lectures will be held remotely via Zoom.
   \item \textbf{Zoom (ZM):} Remote attendance via Zoom is required for all class sessions.
 \end{itemize}
 
 \section{Student Learning Outcomes}
 \begin{itemize}
-  \item Survey cybercrime scenarios, key cybercrime activities, and digital evidence associated with the activities.
-  \item Mimic cybercrime activities in a controlled environment.
-  \item Design forensic approaches and practice techniques to acquire snapshots of computing systems.
-  \item Apply an evidence-based approach to systematically re-create cybercrime scenarios.
-  \item Develop comprehensive cyber investigation reports.
+  \item Illustrate an understanding of file-system internals, with a focus on Windows- and Linux-based systems.
+  \item Apply digital-forensic techniques and tools to retrieve evidence from file systems and memory.
+  \item Demonstrate hands-on abilities for reconstructing evidence from media storage devices.
+  \item Identify network architectures and use essential network-forensic tools to retrieve files from network traffic.
 \end{itemize}
 
-\section{Textbook}
+\section{Textbook and Learning Resources}
 \begin{itemize}
   \item \textbf{Optional:} Xu, Weifeng, Lin Deng, and Mohit Dhabuwala. 2025. \emph{Digital Forensics Basics: A Step-by-Step Guide for Beginners: An Open-Source Approach} (Second Edition). Kindle edition. August 1. Amazon. \href{https://www.amazon.com/dp/B0FKZMJLV7}{\nolinkurl{https://www.amazon.com/dp/B0FKZMJLV7}}.
-  \item \textbf{Optional textbook:} \emph{Incident Response \& Computer Forensics}, McGraw-Hill Education, 3rd edition, Jason T. Luttgens, Matthew Pepe, and Kevin Mandia, ISBN 978-0071798686, 2014.
-  \item \textbf{Supplemental PDF:} \href{https://github.com/frankwxu/digital-forensics-lab/blob/main/papers/books/Digital_Forensics_Andriod.pdf}{Digital Forensics PDF}. \textbf{Access:} Available to enrolled students.
+  \item \textbf{Book:} \href{https://github.com/frankwxu/digital-forensics-lab/blob/main/papers/books/Digital_Forensics_Introduction.pdf}{Digital Forensics Introduction PDF}. \textbf{Password:} cyfi725!
 \end{itemize}
 
 \Needspace{10\baselineskip}
 \section{Course Topics (Tentative)}
-\begin{itemize}[leftmargin=1.8em,label={},itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]
-  \item \textbf{Introduction}
-  \item[1.] Course Overview
-  \item[2.] Basic Computer Skills (Linux)
-  \item \textbf{Mobile Investigation}
-  \item[3.] Android Device and Images
-  \item[4.] Device and System Investigation
-  \item[5.] Application Life Cycle
-  \item[6.] AOSP App Investigation
-  \item \textbf{Midterm}
-  \item[7.] GMS App Investigation -- Messaging
-  \item[8.] GMS App Investigation -- Dialer
-  \item[9.] GMS App Investigation -- Map/Photo
-  \item[10.] GMS App Investigation -- Kik/TextNow
-  \item[11.] GMS App Investigation -- WhatsApp
-  \item[12.] Other Topics (iOS) -- Optional
-  \item[13.] Other Topics (IoT) -- Optional
-  \item[14.] Final Exam Presentation
+\begin{itemize}
+  \item Number System
+  \item Introduction to Computer Systems
+  \item Working with Windows and Command-Line Systems
+  \item Linux and Macintosh File Systems
+  \item Understanding the Digital Forensics Profession and Investigations
+  \item Forensic Tools: Sleuth Kit Tutorial and Data Acquisition
+  \item Evidence Search
+  \item Data Carving
+  \item Introduction to Network Forensics
+  \item Memory Forensics
 \end{itemize}
 
 \section{Grading Criteria}
@@ -148,11 +136,11 @@ The course meets every Thursday and is offered in two formats:
   \textbf{Grade policy}
   \begin{itemize}
     \item Late homework/quizzes/labs will \textbf{not} be graded for \textbf{any} reason.
-  \item Students who miss two class sessions will fail the course.
+    \item Students who miss two class sessions will fail the course.
     \item No make-up quizzes/exams will be allowed without prior arrangements being made.
     \item When emailing questions, capture screenshots and explain how you verified every command used, or the email will be ignored.
     \item To appeal a grade, email the instructor within two weeks of receiving the grade. Overdue appeals will not be considered.
-  \item If the total points do not equal 400, grades will be calculated as a percentage.
+    \item If the total points do not equal 400, grades will be calculated as a percentage.
   \end{itemize}
 \end{policybox}
 
