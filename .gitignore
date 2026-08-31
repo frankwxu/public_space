@@ -1,10 +1,19 @@
-# LaTeX build byproducts
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.synctex.gz
+# Public-materials whitelist: ignore everything unless explicitly allowed below.
+/*
 
-# Local access credentials
-teaching/password.txt
+!.gitignore
+!README.md
+!.vscode/
+!.vscode/**
+
+!teaching/
+teaching/**
+!teaching/**/
+!teaching/*/syllabus/*.tex
+!teaching/*/syllabus/*.pdf
+
+!teaching/lab_instructions/
+!teaching/lab_instructions/**/*.tex
+!teaching/lab_instructions/**/*.pdf
+!teaching/lab_instructions/images/
+!teaching/lab_instructions/images/**
