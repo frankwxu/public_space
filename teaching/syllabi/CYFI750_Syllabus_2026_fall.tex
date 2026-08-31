@@ -1,0 +1,189 @@
+% Content-first syllabus template. Update the course details below for a new offering.
+\documentclass[10pt]{article}
+\usepackage[letterpaper,top=0.7in,bottom=0.7in,left=0.85in,right=0.85in,headsep=0.18in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{Accent}{HTML}{1F4E79}
+\definecolor{AccentLight}{HTML}{F4F6F7}
+\hypersetup{colorlinks=true,linkcolor=Accent,urlcolor=Accent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=0.15em,topsep=0.2em}
+\renewcommand{\arraystretch}{1.08}
+\titleformat{\section}{\Large\bfseries\color{Accent}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.35em}{0.4em}
+\titleformat{\subsection}{\large\bfseries\color{Accent}}{}{0pt}{}
+
+\newcommand{\coursecode}{CYFI 750/490}
+\newcommand{\coursename}{Forensic Incident Response/Capstone}
+\newcommand{\semester}{Fall 2026}
+\newcommand{\credits}{3 credits}
+\newcommand{\instructor}{Dr. Frank (Weifeng) Xu}
+\newcommand{\instructoremail}{wxu@ubalt.edu}
+\newcommand{\officehours}{By appointment}
+\newcommand{\classlocation}{BC 015 (in person); Zoom (online)}
+\newcommand{\officephone}{410-837-5302}
+\newcommand{\officelocation}{LAP 526}
+
+% Optional content fields. Leave a field empty to omit its section from the PDF.
+% Example: \renewcommand{\coursedescription}{This course introduces \ldots}
+\newcommand{\coursedescription}{}
+\newcommand{\prerequisites}{}
+\newcommand{\accessibilitystatement}{}
+\newcommand{\academicintegritystatement}{}
+\newcommand{\courseDescriptionSection}{\ifdefempty{\coursedescription}{}{\section{Course Description}\coursedescription}}
+\newcommand{\prerequisitesSection}{\ifdefempty{\prerequisites}{}{\section{Prerequisites}\prerequisites}}
+\newcommand{\accessibilitySection}{\ifdefempty{\accessibilitystatement}{}{\section{Accessibility and Accommodations}\accessibilitystatement}}
+\newcommand{\academicIntegritySection}{\ifdefempty{\academicintegritystatement}{}{\section{Academic Integrity}\academicintegritystatement}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\small\color{gray}\coursecode}
+\fancyfoot[R]{\small\color{gray}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newtcolorbox{policybox}{colback=AccentLight,colframe=gray!45,boxrule=0.4pt,arc=0pt,left=8pt,right=8pt,top=5pt,bottom=5pt}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{flushleft}
+  {\LARGE\bfseries \coursename}\par
+  \vspace{0.25em}
+  {\large\color{Accent}\coursecode}
+\end{flushleft}
+
+
+\noindent{\color{gray!45}\rule{\textwidth}{0.4pt}}
+\vspace{0.45em}
+\begin{minipage}[t]{0.55\textwidth}
+  {\large\bfseries Instructor}\par\smallskip
+  \instructor\\
+  \textbf{E-mail:} \href{mailto:wxu@ubalt.edu}{\instructoremail}\\
+  \textbf{Office:} \officelocation \quad \textbf{Phone:} \officephone\\
+  \textbf{Office hours:} \officehours
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\textwidth}
+  {\large\bfseries Class Information}\par\smallskip
+  \textbf{Credits:} \credits\\
+  \textbf{Location:} \classlocation\\
+  \textbf{Zoom:} \href{https://ubalt.zoom.us/s/5547149563}{Join the online class}
+\end{minipage}
+
+
+\noindent{\color{gray!45}\rule{\textwidth}{0.4pt}}
+
+\courseDescriptionSection
+\prerequisitesSection
+
+\vspace{-0.55em}
+\section{Meeting Format}
+The course meets every Thursday and is offered in two formats:
+
+\begin{itemize}
+  \item \textbf{Hybrid (HYB):} In-person attendance on campus is required on September 17 and October 1, 15, and 29; all remaining lectures will be held remotely via Zoom.
+  \item \textbf{Zoom (ZM):} Remote attendance via Zoom is required for all class sessions.
+\end{itemize}
+
+\section{Student Learning Outcomes}
+\begin{itemize}
+  \item Survey cybercrime scenarios, key cybercrime activities, and digital evidence associated with the activities.
+  \item Mimic cybercrime activities in a controlled environment.
+  \item Design forensic approaches and practice techniques to acquire snapshots of computing systems.
+  \item Apply an evidence-based approach to systematically re-create cybercrime scenarios.
+  \item Develop comprehensive cyber investigation reports.
+\end{itemize}
+
+\section{Textbook}
+\begin{itemize}
+  \item \textbf{Optional:} Xu, Weifeng, Lin Deng, and Mohit Dhabuwala. 2025. \emph{Digital Forensics Basics: A Step-by-Step Guide for Beginners: An Open-Source Approach} (Second Edition). Kindle edition. August 1. Amazon. \href{https://www.amazon.com/dp/B0FKZMJLV7}{\nolinkurl{https://www.amazon.com/dp/B0FKZMJLV7}}.
+  \item \textbf{Optional textbook:} \emph{Incident Response \& Computer Forensics}, McGraw-Hill Education, 3rd edition, Jason T. Luttgens, Matthew Pepe, and Kevin Mandia, ISBN 978-0071798686, 2014.
+  \item \textbf{Supplemental PDF:} \href{https://github.com/frankwxu/digital-forensics-lab/blob/main/papers/books/Digital_Forensics_Andriod.pdf}{Digital Forensics PDF}. \textbf{Access:} Available to enrolled students.
+\end{itemize}
+
+\Needspace{10\baselineskip}
+\section{Course Topics (Tentative)}
+\begin{itemize}[leftmargin=1.8em,label={},itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+  \item \textbf{Introduction}
+  \item[1.] Course Overview
+  \item[2.] Basic Computer Skills (Linux)
+  \item \textbf{Mobile Investigation}
+  \item[3.] Android Device and Images
+  \item[4.] Device and System Investigation
+  \item[5.] Application Life Cycle
+  \item[6.] AOSP App Investigation
+  \item \textbf{Midterm}
+  \item[7.] GMS App Investigation -- Messaging
+  \item[8.] GMS App Investigation -- Dialer
+  \item[9.] GMS App Investigation -- Map/Photo
+  \item[10.] GMS App Investigation -- Kik/TextNow
+  \item[11.] GMS App Investigation -- WhatsApp
+  \item[12.] Other Topics (iOS) -- Optional
+  \item[13.] Other Topics (IoT) -- Optional
+  \item[14.] Final Exam Presentation
+\end{itemize}
+
+\section{Grading Criteria}
+\begin{itemize}[label={},leftmargin=0pt,itemsep=0.1em]
+  \item \textbf{Lab/Projects/Homework/Quizzes:} 200 points
+  \item \textbf{Midterm:} 100 points
+  \item \textbf{Final:} 100 points
+  \item \textbf{Total:} 400 points
+\end{itemize}
+
+\textbf{Grade thresholds:} A: 95\%; A-: 90\%; B+: 87\%; B: 83\%; B-: 80\%; C+: 77\%; C: 73\%; C-: 70\%; F: below 70\%.
+
+\begin{policybox}
+  \textbf{Grade policy}
+  \begin{itemize}
+    \item Late homework/quizzes/labs will \textbf{not} be graded for \textbf{any} reason.
+  \item Students who miss two class sessions will fail the course.
+    \item No make-up quizzes/exams will be allowed without prior arrangements being made.
+    \item When emailing questions, capture screenshots and explain how you verified every command used, or the email will be ignored.
+    \item To appeal a grade, email the instructor within two weeks of receiving the grade. Overdue appeals will not be considered.
+  \item If the total points do not equal 400, grades will be calculated as a percentage.
+  \end{itemize}
+\end{policybox}
+
+\section{Appeal a Grade}
+When appealing a grade, it is important to provide a clear and well-justified reason for why the grade should be re-evaluated. Use the following template and include relevant supporting reasons.
+
+\begin{quote}
+  \texttt{[Your Name]}\\
+  \texttt{[Your Student ID]}\\
+  \texttt{[Course Name and Number]}\\
+  \texttt{[Date]}
+\end{quote}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Detailed Explanation of the Issue:} Clearly and concisely describe the specific aspect(s) of your work that you believe were not accurately assessed or graded. Be as specific as possible and refer to relevant sections of your assignment or exam.
+  \item \textbf{Providing Supporting Evidence:} Attach or reference relevant materials, such as rubrics, assignment guidelines, or notes from class discussions, that demonstrate your understanding of the subject matter and your adherence to the assignment requirements.
+  \item \textbf{Comparative Analysis:} Compare your work to the grading criteria and any exemplary solutions or model answers that were provided. Highlight areas where you believe your work meets or exceeds the expectations outlined in the course.
+  \item \textbf{Addressing Feedback:} If you received feedback from the initial grading, explain how you have incorporated that feedback into your work and why you believe it should lead to a higher grade.
+  \item \textbf{Clarity in Communication:} Ensure your appeal is well-organized, concise, and respectful in tone. Clearly articulate your points and avoid unnecessary emotional language.
+  \item \textbf{Meeting Deadlines:} Check the institution's policies regarding grade appeals and deadlines. Make sure your appeal is submitted within the specified timeframe.
+\end{enumerate}
+
+\section{Other Important Information}
+\accessibilitySection
+\academicIntegritySection
+\subsection{Academic Calendar and Important Dates}
+\href{https://www.ubalt.edu/academics/classes-and-registration/academic-calendar.cfm}{\nolinkurl{https://www.ubalt.edu/academics/classes-and-registration/academic-calendar.cfm}}
+
+\subsection{Recording Statement}
+Faculty may be required to record classes for the purposes of accommodating a disability or may opt to do so for students who cannot attend or who wish to review the full class content. All recordings are for the sole use of class instruction and study and may not be reproduced by students for any other purpose; to do so is a conduct violation. Faculty cannot reproduce students' voices or images from the class for any other purpose without additional student consent. All such recordings are protected by a UB login process based on where they are posted. Students may mute their microphone or turn off their camera if they do not consent to be recorded, but this may mean they need to find additional ways to participate in class. Faculty are to notify students when a class is recorded.
+
+Students can use a virtual background on Zoom to protect their privacy while remaining clearly in attendance and engaged in class. Students should keep in mind that faculty have to be able to determine if a student is truly participating in a class to comply with University and federal attendance policies. A student could be deemed absent if logged in to a synchronous class but not responding. Visual and/or audio presence may be required for examinations or other types of assessment.
+
+\end{document}
