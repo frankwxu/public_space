@@ -21,3 +21,6 @@ teaching/**
 # Allow README files at any depth, regardless of capitalization.
 !**/
 !**/[Rr][Ee][Aa][Dd][Mm][Ee].[Mm][Dd]
+
+# Course textbook
+!teaching/CYFI725/cyfi725_book.pdf
