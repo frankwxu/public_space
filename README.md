@@ -1,10 +1,10 @@
 # Public Teaching Materials
 
-## Course Syllabi
+## Courses
 
-- [CYFI 445: Forensic Data Analysis](teaching/CYFI445/syllabus/CYFI445_Syllabus_2026_fall.pdf) — Fall 2026 syllabus covering forensic data analytics, visualization, and anomaly detection.
-- [CYFI 725: Computer and Digital Forensics](teaching/CYFI725/syllabus/CYFI725_Syllabus_2026_fall.pdf) — Fall 2026 syllabus covering file systems, evidence recovery, memory analysis, and network forensics.
-- [CYFI 750/490: Forensic Incident Response/Capstone](teaching/CYFI750/syllabus/CYFI750_Syllabus_2026_fall.pdf) — Fall 2026 capstone syllabus applying cyber-investigation methods to cybercrime scenarios.
+- [CYFI 445: Forensic Data Analysis](teaching/CYFI445/readme.md) — Fall 2026 syllabus covering forensic data analytics, visualization, and anomaly detection.
+- [CYFI 725: Computer and Digital Forensics](teaching/CYFI725/readme.md) — Fall 2026 syllabus covering file systems, evidence recovery, memory analysis, and network forensics.
+- [CYFI 750/490: Forensic Incident Response/Capstone](teaching/CYFI750/readme.md) — Fall 2026 capstone syllabus applying cyber-investigation methods to cybercrime scenarios.
 
 ## Lab and Class Resources
 
