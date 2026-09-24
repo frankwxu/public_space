@@ -24,3 +24,8 @@ teaching/**
 
 # Course textbook
 !teaching/CYFI725/cyfi725_book.pdf
+
+
+# Course exams
+!teaching/CYFI725/sample_exams/*.tex
+!teaching/CYFI725/sample_exams/*.pdf
