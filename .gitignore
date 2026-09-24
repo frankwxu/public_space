@@ -1,31 +1,51 @@
-# Public-materials whitelist: ignore everything unless explicitly allowed below.
-/*
+# Sensitive and private material
+**/password.txt
+**/instructor_key/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
 
-!.gitignore
-!README.md
-!.vscode/
-!.vscode/**
+# LaTeX build artifacts (keep source files and compiled PDFs)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.lof
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+_minted*/
 
-!teaching/
-teaching/**
-!teaching/**/
-!teaching/*/syllabus/*.tex
-!teaching/*/syllabus/*.pdf
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-!teaching/lab_instructions/
-!teaching/lab_instructions/**/*.tex
-!teaching/lab_instructions/**/*.pdf
-!teaching/lab_instructions/images/
-!teaching/lab_instructions/images/**
+# Virtual environments
+.venv/
+venv/
+env/
 
-# Allow README files at any depth, regardless of capitalization.
-!**/
-!**/[Rr][Ee][Aa][Dd][Mm][Ee].[Mm][Dd]
+# OS and editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
 
-# Course textbook
-!teaching/CYFI725/cyfi725_book.pdf
-
-
-# Course exams
-!teaching/CYFI725/sample_exams/*.tex
-!teaching/CYFI725/sample_exams/*.pdf
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.orig
