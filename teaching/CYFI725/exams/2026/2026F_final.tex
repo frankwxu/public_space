@@ -211,7 +211,7 @@ Create one record for each evidence type. Save it as \texttt{test\_record.md} in
 The complete eight-field record is a GitHub deliverable. Do not reproduce the full record as a table in the main report. Summarize its important findings in the appropriate results subsection and give the exact path to its \texttt{test\_record.md} file in GitHub.
 
 \subsection{Worked Example: Fictional Authentication Log}
-The following fictional example demonstrates the required level of documentation; it is not a benchmark of Hermes Agent or OpenClaw performance. Students may not reuse this evidence, prompt, output, or analysis for one of the four required investigations.
+The following fictional example demonstrates the required level of documentation; it is not a benchmark of Hermes Agent or OpenClaw performance. Students may not reuse this evidence, prompt, output, or analysis for one of the four required investigations. The example table and figure are instructional material in this assignment document; students must not copy them or reproduce the complete worked example in the final report.
 
 The exact contents of the fictional evidence file \texttt{auth\_case.txt}, including the final newline, are:
 \begin{quote}
@@ -345,32 +345,31 @@ Briefly explain how the hands-on investigation was performed. Identify the four 
 In the main report, include a four-investigation design table listing the evidence type, evidence ID, investigative question, ground truth, checking method, and main measure. Place exact prompts, complete commands used to prepare evidence, file lists, and detailed run logs in the corresponding GitHub evidence-type folders.
 
 \subsection{Text, Image, Audio, and Video Results}
-Table~\ref{tab:worked-test-record} defines the complete eight-field record required for each evidence type; it is not a table that teams must reproduce in the main report. In this results section, summarize the most important evidence, agent actions, findings, errors, numerical results, and validation from the four investigations. For each summary, give the exact GitHub path to the complete record, such as \texttt{text/test\_record.md}. Use the following four required subsections.
+Table~\ref{tab:worked-test-record} illustrates the complete eight-field record required in GitHub for each evidence type. It is not a report template: do not copy the fictional worked example or reproduce the complete eight-field records in the final report. Instead, use the following four required subsections to explain the most important evidence, agent actions, findings, errors, checking results, and limitations. Together, these four subsections should normally occupy 6--7 pages.
+
+Use the same six-part structure in every evidence-type subsection:
+\paragraph{1. Purpose and evidence.} State the investigative question, identify the supplied artifact, and briefly describe the known correct answer used to check the agent's work.
+\paragraph{2. Preparation and agent actions.} State whether the agent examined the artifact directly or used a prepared input such as OCR text, a transcript, or extracted frames. Summarize the important prompts, tools, actions, and processing steps.
+\paragraph{3. Results.} Present the main supported findings and the most important incorrect, unsupported, missing, ambiguous, or unverifiable claims. Include a suitable numerical result when the evidence supports one.
+\paragraph{4. Independent check.} Describe the manual examination or standard tool used to compare the findings with the known correct answer. Report the outcome.
+\paragraph{5. Limitations and screenshots.} Explain what the agent could not determine and what a human examiner must verify. Include one or two numbered and captioned screenshots showing an important result, error, or checking step.
+\paragraph{6. GitHub record.} Give the exact path to the complete \texttt{test\_record.md}, such as \texttt{text/test\_record.md}.
+
+Keep exact prompts, complete outputs, full settings, hashes, commands, activity logs, complete screenshot sets, and the eight-field records in the corresponding GitHub evidence-type folders.
 
 \subsubsection{Text Evidence}
-Summarize the text investigation, including the extraction of names, accounts, dates, locations, and indicators of compromise; searches and connections across files; timeline reconstruction; source citations; instructions hidden in evidence that try to mislead the agent; and comparison with manual examination or standard text tools. Give the complete-record path: \texttt{text/test\_record.md}.
+In addition to the six required parts, report extracted names, accounts, dates, locations, indicators of compromise, and other relevant items; important keyword matches or connections across files; a timeline linked to source lines or passages; the agent's response to instructions hidden in the evidence that tried to mislead it; and the comparison with manual examination or a standard text tool. Use the record path \texttt{text/test\_record.md}.
 
 \subsubsection{Image Evidence}
-Summarize the image investigation. Clearly separate what is visible from conclusions about identity, location, intent, authenticity, or context. Report text extracted from the image and file information separately, describe any steps used to prepare the image, and compare the results with manual inspection or standard image tools. Give the complete-record path: \texttt{image/test\_record.md}.
+In addition to the six required parts, report visible people, objects, text, screens, timestamps, or environmental details before presenting interpretations; report OCR results and available file information separately; distinguish observations from conclusions about identity, location, intent, authenticity, or context; describe possible alteration or misleading presentation without overstating certainty; and compare the results with manual inspection, OCR, or a standard image tool. Use the record path \texttt{image/test\_record.md}.
 
 \subsubsection{Audio Evidence}
-Summarize the audio investigation. Cover transcript accuracy, timestamps, neutral speaker labels, uncertain or inaudible portions, extracted statements, observed background sounds, and the effects of any steps used to prepare the audio. Compare the results with a verified transcript or standard audio examination. Give the complete-record path: \texttt{audio/test\_record.md}.
+In addition to the six required parts, report transcript accuracy, timestamps, neutral speaker labels, uncertain or inaudible portions, relevant statements, and observed background sounds; explain the effects of transcription, conversion, noise reduction, or other preparation; and compare the results with a verified transcript, manual listening, or a standard audio tool. Use the record path \texttt{audio/test\_record.md}.
 
 \subsubsection{Video Evidence}
-Summarize the video investigation, including timestamped observable events, relevant people or objects, text or speech extraction, tracking uncertainty, frame-sampling limitations, discontinuities, and separation of actions from inferred motives. State whether frames and audio were analyzed jointly or separately. Give the complete-record path: \texttt{video/test\_record.md}.
+In addition to the six required parts, report a timestamped sequence of observable events; relevant people, objects, text, speech, and actions without assuming identity or intent; whether frames and audio were analyzed jointly or separately; tracking uncertainty; frame-sampling, resolution, occlusion, and audio limitations; discontinuities or missing segments; and comparison with manual viewing or a standard video tool. Use the record path \texttt{video/test\_record.md}.
 
-Within each evidence-type subsection, include:
-\begin{itemize}
- \item the investigative purpose and a brief description of the evidence;
- \item the agent's material actions, tool calls, or processing path;
- \item the main supported findings and the most important incorrect, unsupported, missing, ambiguous, or unverifiable claims;
- \item a suitable numerical result when the evidence supports one;
- \item one or two representative, numbered screenshots that support the most important result or failure; and
- \item the exact GitHub path to the corresponding \texttt{test\_record.md} file.
-\end{itemize}
 Include at least one summary table comparing the four evidence types. At minimum, identify the evidence type, main task, key supported finding, major problem or limitation, main measure, and exact GitHub path to \texttt{test\_record.md}. Clearly distinguish work performed directly by the agent from work performed by OCR, transcription, frame extraction, or another supporting tool.
-
-The main section explains \emph{what happened and why it matters}. Store exact prompts, complete outputs, full settings, hashes, checking commands, activity logs, complete screenshot sets, and each eight-field record in the corresponding GitHub evidence-type folder.
 
 \subsection{Validation and Comparison Across Evidence Types}
 Check every important claim from all four investigations against established ground truth and a standard forensic tool or manual examination. Classify claims as supported, incorrect, unsupported, missing, ambiguous, or unverifiable. Compare accuracy, completeness, whether another examiner can repeat the work, efficiency, uncertainty, and the link between each finding and its source evidence across all four evidence types. Explain disagreements, failed steps, unsupported claims, and the effects of preparing evidence with other tools.
@@ -454,7 +453,7 @@ Agent Installation and Configuration & 15 & \textbf{Excellent (full points):} In
 \hline
 Investigation Environment and Procedure & 10 & \textbf{Excellent (full points):} Clearly documents the isolated environment, permissions, supplied evidence, prompts, tools, steps used to prepare evidence, source and processing history of files, ground truth, and checking procedure for all four investigations. \par\medskip \textbf{Good (75\%):} Covers all four investigations with minor gaps that make the work harder to repeat or understand. \par\medskip \textbf{Needs Improvement (50\% or less):} Presents an unsafe procedure, a procedure that cannot be repeated, unverified ground truth, or substantial omissions. \\
 \hline
-Text, Image, Audio, and Video Investigations & 30 & \textbf{Excellent (full points):} Completes the four supplied-artifact investigations with exact prompts, complete records, representative screenshots, supported findings, errors or limitations, and a clear account of the agent's actions. \par\medskip \textbf{Good (75\%):} Completes all four evidence types with only minor gaps in execution, records, findings, or screenshots. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits an evidence type or provides substantially incomplete work or work that cannot be checked. \\
+Text, Image, Audio, and Video Investigations & 30 & \textbf{Excellent (full points):} Completes the four supplied-artifact investigations and presents each through the required six-part report summary with appropriate evidence-specific findings, independent checks, limitations, screenshots, and GitHub record path. The repository contains the exact prompts and complete investigation records. \par\medskip \textbf{Good (75\%):} Completes all four evidence types with only minor gaps in the six-part summaries, execution, records, findings, checking, or screenshots. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits an evidence type, omits major parts of the required summaries, or provides substantially incomplete work or work that cannot be checked. \\
 \hline
 Checking, Comparison, and Reflection & 20 & \textbf{Excellent (full points):} Independently checks all four investigations; distinguishes supported, incorrect, unsupported, missing, ambiguous, and unverifiable claims; compares all evidence types; revisits the reading-based expectations; and answers every reflection question with evidence. \par\medskip \textbf{Good (75\%):} Checks and discusses all four investigations with minor gaps in measures, comparison, limitations, reading connections, or reflection. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits independent checking or investigation analysis, presents unsupported conclusions or an incomplete reflection, or weakly addresses risks and examiner oversight. \\
 \hline
@@ -534,14 +533,6 @@ Use the instructor-provided CYFI~725 AI-Agent Forensics Benchmark distributed in
  The private instructor answer key is not part of the student package.
  \item If the GitHub directory is unavailable, the student package does not contain the listed files, or any hash fails, stop and contact the instructor. Do not use a copied repository, unofficial download site, recreated file, or other replacement, and do not continue with a failed integrity check.
 \end{enumerate}
-
-\subsection{Forensic Evidence and Datasets}
-The following resources are optional and are not part of the four required investigations:
-\begin{itemize}
- \item Course lecture USB disk image: \href{https://raw.githubusercontent.com/frankwxu/digital-forensics-lab/main/Basic_Computer_Skills_for_Forensics/dd_image/usb_dd.7z}{download \texttt{usb\_dd.7z}}. Extract and analyze only a verified working copy; calculate its hash and compare it with the hash distributed with the image before testing.
- \item NIST Computer Forensic Reference Data Sets: \url{https://www.nist.gov/itl/ssd/software-quality-group/computer-forensic-reference-data-sets}
- \item Digital Corpora: \url{https://digitalcorpora.org/}
-\end{itemize}
 
 \subsection{Example Investigation Questions}
 \begin{itemize}
