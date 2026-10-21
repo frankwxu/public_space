@@ -16,22 +16,22 @@
 \usepackage{multirow}
 \usepackage{adjustbox}
 \usepackage{longtable}
-
+ 
 \begin{document}
 \pagenumbering{roman}
 \captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
 \captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Table},labelsep=colon,textfont={it}}
 
 \begin{center}
-\thispagestyle{empty}
-{\LARGE University of Baltimore}\\[0.5cm]
-{\Large Cyber Forensics Program}\\[2.5cm]
-{\linespread{1.2}\selectfont\Large CYFI 725 Final Project}\\[0.6cm]
-{\huge\bfseries AI Agents for Digital Forensic Investigations}\\[1.5cm]
-\vspace{\fill}
-{\Large Final Hands-On Project Requirements}\\[0.5cm]
-{\Large Dr. Frank Xu}\\[0.5cm]
-{\Large Fall 2026}
+    \thispagestyle{empty}
+    {\LARGE University of Baltimore}\\[0.5cm]
+    {\Large Cyber Forensics Program}\\[2.5cm]
+    {\linespread{1.2}\selectfont\Large CYFI 725 Final Project}\\[0.6cm]
+    {\huge\bfseries AI Agents for Digital Forensic Investigations}\\[1.5cm]
+    \vspace{\fill}
+    {\Large Final Hands-On Project Requirements}\\[0.5cm]
+    {\Large Dr. Frank Xu}\\[0.5cm]
+    {\Large Fall 2026}
 \end{center}
 
 \clearpage
@@ -40,7 +40,7 @@
 \clearpage
 
 \begin{abstract}
-This final project examines how an AI agent can support a digital forensic investigation. In teams of three or four, students will select, install, test, and carefully evaluate either Hermes Agent or OpenClaw. The agent must run in an isolated virtual machine or container and may access only copied, non-sensitive sample evidence. Each team will read three or four instructor-assigned research papers or scholarly readings, investigate four instructor-provided artifacts---one text, one image, one audio, and one video artifact---check the agent's results against known correct answers (ground truth), and evaluate both useful and unreliable behavior. The deliverables are a professional technical report normally 18--22 pages, including references but excluding the title page, table of contents, and appendices, and a 20--25 minute presentation. The project is worth 100 points.
+    This final project examines how an AI agent can support a digital forensic investigation. In teams of three or four, students will select, install, test, and carefully evaluate either Hermes Agent or OpenClaw. The agent must run in an isolated virtual machine or container and may access only copied, non-sensitive sample evidence. Each team will read three or four instructor-assigned research papers or scholarly readings, investigate four instructor-provided artifacts---one text, one image, one audio, and one video artifact---check the agent's results against expected results established through independent examination (ground truth), and evaluate both useful and unreliable behavior. The deliverables are a professional technical report normally 18--22 pages, including references but excluding the title page, table of contents, and appendices, and a 20--25 minute presentation. The project is worth 100 points.
 \end{abstract}
 
 
@@ -56,22 +56,22 @@ Students will work in teams of three or four on a 100-point hands-on investigati
 Students use the following inputs to complete the project:
 
 \begin{center}
-\small
-\begin{tabular}{|p{0.24\textwidth}|p{0.63\textwidth}|}
-\hline
-\textbf{Input} & \textbf{What the Team Must Use} \\
-\hline
-Agent framework & Either Hermes Agent or OpenClaw, installed inside an isolated virtual machine or container. \\
-\hline
-Language model & A model available through the course Ollama server, Google Gemini API, OpenAI API, or another instructor-approved provider. Record the provider and exact model name. \\
-\hline
-Assigned readings & Three or four research papers or scholarly readings selected by the instructor and provided through the course materials. Use them to form expectations about agent capabilities, limits, reliability, and the need for human checking. \\
-\hline
-Required evidence & The four instructor-provided artifacts: one text, one image, one audio, and one video artifact. Verify the files against the supplied hashes before analysis. \\
-\hline
-Checking methods & Known correct answers plus a suitable manual examination or standard forensic tool for independently checking each investigation. \\
-\hline
-\end{tabular}
+    \small
+    \begin{tabular}{|p{0.24\textwidth}|p{0.63\textwidth}|}
+        \hline
+        \textbf{Input}    & \textbf{What the Team Must Use}                                                                                                                                                                                                         \\
+        \hline
+        Agent framework   & Either Hermes Agent or OpenClaw, installed inside an isolated virtual machine or container.                                                                                                                                             \\
+        \hline
+        Language model    & A model available through the course Ollama server, Google Gemini API, OpenAI API, or another instructor-approved provider. Record the provider and exact model name.                                                                   \\
+        \hline
+        Assigned readings & Three or four research papers or scholarly readings selected by the instructor and provided through the course materials. Use them to form expectations about agent capabilities, limits, reliability, and the need for human checking. \\
+        \hline
+        Required evidence & The four instructor-provided artifacts: one text, one image, one audio, and one video artifact. Verify the files against the supplied hashes before analysis.                                                                           \\
+        \hline
+        Checking methods  & Expected results (ground truth) established through a suitable manual examination or standard forensic tool. The instructor's private answer key is not provided to students.                                                           \\
+        \hline
+    \end{tabular}
 \end{center}
 
 Evidence in \texttt{evidence/original/} and \texttt{evidence/prepared/} is input to an investigation. Original evidence is the unchanged source file. Prepared evidence is an input created from the source, such as OCR text, a transcript, extracted frames, or a converted file. Agent responses, action logs, errors, and files generated by the agent are outputs and belong in \texttt{outputs/}.
@@ -80,42 +80,42 @@ Evidence in \texttt{evidence/original/} and \texttt{evidence/prepared/} is input
 Each team must produce all of the following:
 
 \begin{center}
-\small
-\begin{tabular}{|p{0.24\textwidth}|p{0.63\textwidth}|}
-\hline
-\textbf{Output} & \textbf{Required Result and Location} \\
-\hline
-Four completed investigations & One investigation of each supplied text, image, audio, and video artifact. \\
-\hline
-GitHub investigation records & One complete eight-field \texttt{test\_record.md} plus the required evidence, prompts, outputs, screenshots, validation, and scripts folders for each evidence type. \\
-\hline
-Final report & One PDF containing the 18--22 page main report and the two short required appendices. The report connects the assigned readings to the investigation, summarizes the results, and points readers to the complete GitHub records. \\
-\hline
-Presentation & One PowerPoint file and a 20--25 minute presentation containing a representative live or recorded agent demonstration. \\
-\hline
-Canvas submission & Only the team GitHub repository URL. The repository must contain the report, presentation, and all required investigation files before the deadline. \\
-\hline
-\end{tabular}
+    \small
+    \begin{tabular}{|p{0.24\textwidth}|p{0.63\textwidth}|}
+        \hline
+        \textbf{Output}               & \textbf{Required Result and Location}                                                                                                                                                                                            \\
+        \hline
+        Four completed investigations & One investigation of each supplied text, image, audio, and video artifact.                                                                                                                                                       \\
+        \hline
+        GitHub investigation records  & One complete eight-field \texttt{test\_record.md} plus the required evidence, prompts, outputs, screenshots, validation, and scripts folders for each evidence type.                                                             \\
+        \hline
+        Final report                  & One PDF containing the 18--22 page main report and the two short required appendices. The report connects the assigned readings to the investigation, summarizes the results, and points readers to the complete GitHub records. \\
+        \hline
+        Presentation                  & One PowerPoint file and a 20--25 minute presentation containing a representative live or recorded agent demonstration.                                                                                                           \\
+        \hline
+        Canvas submission             & Only the team GitHub repository URL. The repository must contain the report, presentation, and all required investigation files before the deadline.                                                                             \\
+        \hline
+    \end{tabular}
 \end{center}
 
 \subsection{Overall Guidelines and Hands-On Workflow}
 The project follows a practical forensic workflow:
 \begin{enumerate}
- \item Read the three or four assigned sources and identify clear expectations about what the agent may do well, where it may fail, and what a human examiner must check.
- \item Install and configure Hermes Agent or OpenClaw in an isolated environment with only the minimum permissions it needs.
- \item Work from verified copies of the four instructor-provided artifacts and record their hashes.
- \item Complete one hands-on investigation for each evidence type: text, image, audio, and video.
- \item Record the exact investigation steps, prompts, tool calls, commands, inputs, outputs, files created from the evidence, hashes, screenshots, errors, and unexpected actions.
- \item Independently check every important result against known correct answers and a standard forensic tool or manual examination.
- \item Compare performance across evidence types and compare the observed results with expectations drawn from the assigned readings. Write a reflection supported by investigation results.
- \item Summarize the important results in the report, keep the complete records and files in the required GitHub folders, remove sensitive details and credentials, and submit only the GitHub URL through Canvas.
+    \item Read the three or four assigned sources and identify clear expectations about what the agent may do well, where it may fail, and what a human examiner must check.
+    \item Install and configure Hermes Agent or OpenClaw in an isolated environment with only the minimum permissions it needs.
+    \item Work from verified copies of the four instructor-provided artifacts and record their hashes.
+    \item Complete one hands-on investigation for each evidence type: text, image, audio, and video.
+    \item Record the exact investigation steps, prompts, tool calls, commands, inputs, outputs, prepared or generated files used as evidence, required hashes, screenshots, errors, and unexpected actions.
+    \item Independently establish the expected results through manual examination or a standard forensic tool, then compare every important agent result with them.
+    \item Compare performance across evidence types and compare the observed results with expectations drawn from the assigned readings. Write a reflection supported by investigation results.
+    \item Summarize the important results in the report, keep the complete records and files in the required GitHub folders, remove sensitive details and credentials, and submit only the GitHub URL through Canvas.
 \end{enumerate}
 
 
 \subsection{Why Use Hermes Agent or OpenClaw?}
 This project evaluates an investigation in which an AI agent plans steps and uses tools, not only the quality of a chatbot answer. Standard ChatGPT or Claude chat interfaces can summarize uploaded material and answer questions, but Hermes Agent and OpenClaw can be installed in a controlled environment, given specific permissions, connected to local tools, and observed while they plan and carry out several investigative steps. This makes it possible to evaluate matters central to digital forensics: giving the agent only the minimum permissions it needs (least privilege), tool selection, command execution, evidence integrity, the source and processing history of files, whether another examiner can repeat the work, unexpected actions, and human oversight. ChatGPT or Claude may be used as the language model behind the agent or as a documented comparison when permitted, but their standard chat interfaces alone do not satisfy the agent-installation requirement.
 
-Agent software does not automatically make an investigation easy to inspect. Teams must explain any limits on what they can observe, including hidden or undocumented system prompts; model behavior that the provider does not disclose; model, provider, or service updates; incomplete reasoning or tool-use logs; unclear choices among models and tools; changes to evidence that were not documented; internal steps that cannot be viewed; results that change when a test is repeated; and uncertainty about whether a cloud service stores or reuses submitted evidence. A polished final answer is not a complete record of what happened. Teams must preserve the prompt, configuration, model and agent versions, tool calls, commands, inputs, files created from the evidence, outputs, timestamps, errors, and checking steps that they can observe. When an internal decision cannot be inspected or repeated, state that limitation rather than claiming that the process is fully explainable. The report does not need the model's private step-by-step reasoning; instead, it should require evidence citations, action logs, repeatable procedures, and independently checked results.
+Agent software does not automatically make an investigation easy to inspect. Teams must explain any limits on what they can observe, including hidden or undocumented system prompts; model behavior that the provider does not disclose; model, provider, or service updates; incomplete reasoning or tool-use logs; unclear choices among models and tools; changes to evidence that were not documented; internal steps that cannot be viewed; results that change when a test is repeated; and uncertainty about whether a cloud service stores or reuses submitted evidence. A polished final answer is not a complete record of what happened. Teams must preserve the prompt, configuration, model and agent versions, tool calls, commands, inputs, prepared or generated files used as evidence, outputs, timestamps, errors, and checking steps that they can observe. When an internal decision cannot be inspected or repeated, state that limitation rather than claiming that the process is fully explainable. The report does not need the model's private step-by-step reasoning; instead, it should require evidence citations, action logs, repeatable procedures, and independently checked results.
 
 \section{Required Reading Assignment}
 Read the three or four research papers or scholarly readings assigned by the instructor and provided through the course materials. The purpose is to help the team know what to observe during the four investigations, not to conduct a broad literature search. No additional research papers or formal research questions are required.
@@ -123,90 +123,90 @@ Read the three or four research papers or scholarly readings assigned by the ins
 In the report's \emph{Background and Expectations} section, connect the readings rather than writing a separate summary of each source. Identify the main capabilities, limits, or risks that are relevant to the project and state two to four specific expectations that can be examined using the supplied artifacts. In the \emph{Reflection and Discussion} section, return to those expectations and explain whether the observed results supported, challenged, or qualified them. Cite all assigned readings using one consistent reference style.
 
 \section{Investigating Text, Images, Audio, and Video}
-The following questions provide a common basis for comparing projects. They do not guarantee a correct investigation; students must adapt prompts to the evidence, check every important claim, and document limitations. Each team must complete four documented investigations using the supplied text, image, audio, and video artifacts. A single investigation may include an initial prompt and focused follow-up prompts, but all prompts and outputs for that evidence type belong to the same investigation record.
+The following questions provide a common basis for comparing projects. They do not guarantee a correct investigation; students must adapt prompts to the evidence, check every important claim, and document limitations. Each team must complete four documented investigations using the supplied text, image, audio, and video artifacts. A single investigation may include an initial prompt and focused follow-up prompts, but all prompts and outputs for that evidence type belong in the same evidence-type folder and must be identified in its \texttt{test\_record.md}.
 
 \subsection{Questions Required for Every Investigation}
 For every investigation, answer all of the following:
 \begin{enumerate}
- \item What investigative question is the agent being asked to answer?
- \item What evidence was supplied, and what is its hash, source, format, and known ground truth?
- \item Did the agent access the evidence directly, or was the evidence first prepared with another tool, such as OCR, transcription, or frame extraction?
- \item What exact prompt, agent version, model, tools, permissions, and settings were used?
- \item What factual claims did the agent produce?
- \item Which claims are directly supported, and where is the supporting evidence located?
- \item Which claims are incorrect, unsupported, missing, ambiguous, or unverifiable?
- \item Did the agent separate what it directly observed from what it concluded, and did it report uncertainty?
- \item Did the agent modify evidence, create files, contact external services, or perform unexpected actions?
- \item How did its results compare with ground truth and a standard tool or manual examination?
- \item What should a human examiner verify before relying on the result?
+    \item What investigative question is the agent being asked to answer?
+    \item What evidence was supplied, and what is its hash, source, and format? What expected result did the team establish independently, and how?
+    \item Did the agent access the evidence directly, or was the evidence first prepared with another tool, such as OCR, transcription, or frame extraction?
+    \item What exact prompt, agent version, model, tools, permissions, and settings were used?
+    \item What factual claims did the agent produce?
+    \item Which claims are directly supported, and where is the supporting evidence located?
+    \item Which claims are incorrect, unsupported, missing, ambiguous, or unverifiable?
+    \item Did the agent separate what it directly observed from what it concluded, and did it report uncertainty?
+    \item Did the agent modify evidence, create files, contact external services, or perform unexpected actions?
+    \item How did its results compare with the expected results established through a standard tool or manual examination?
+    \item What should a human examiner verify before relying on the result?
 \end{enumerate}
 
 \subsection{Text Evidence Questions}
 Test whether the agent can:
 \begin{itemize}
- \item Identify people, accounts, dates, locations, URLs, IP addresses, file paths, and other relevant entities.
- \item Summarize a document, message collection, or log without adding unsupported facts.
- \item Search for relevant keywords and explain why the matching passages matter.
- \item Connect related statements or events across multiple text files.
- \item Reconstruct a chronological timeline with a source citation for every event.
- \item Identify contradictions, missing context, uncertainty, and alternative interpretations.
- \item Extract indicators of compromise and compare them with manually verified values.
- \item Ignore instructions hidden inside evidence that try to mislead it or change its task.
+    \item Identify people, accounts, dates, locations, URLs, IP addresses, file paths, and other relevant entities.
+    \item Summarize a document, message collection, or log without adding unsupported facts.
+    \item Search for relevant keywords and explain why the matching passages matter.
+    \item Connect related statements or events across multiple text files.
+    \item Reconstruct a chronological timeline with a source citation for every event.
+    \item Identify contradictions, missing context, uncertainty, and alternative interpretations.
+    \item Extract indicators of compromise and compare them with manually verified values.
+    \item Ignore instructions hidden inside evidence that try to mislead it or change its task.
 \end{itemize}
 
 \subsection{Image Evidence Questions}
 Test whether the agent can:
 \begin{itemize}
- \item Describe only visible content before offering interpretations.
- \item Identify relevant objects, people, text, screens, timestamps, or environmental details.
- \item Extract visible text and compare it with conventional OCR or manual transcription.
- \item Distinguish direct visual observations from inferred context or identity.
- \item Examine available metadata separately from visual content.
- \item Identify content that may have been altered, cropped, generated, or presented in a misleading way without claiming more certainty than the evidence supports.
- \item Explain which conclusions require specialist tools or additional evidence.
- \item Avoid identifying a person or location solely from appearance unless independently verified.
+    \item Describe only visible content before offering interpretations.
+    \item Identify relevant objects, people, text, screens, timestamps, or environmental details.
+    \item Extract visible text and compare it with conventional OCR or manual transcription.
+    \item Distinguish direct visual observations from inferred context or identity.
+    \item Examine available metadata separately from visual content.
+    \item Identify content that may have been altered, cropped, generated, or presented in a misleading way without claiming more certainty than the evidence supports.
+    \item Explain which conclusions require specialist tools or additional evidence.
+    \item Avoid identifying a person or location solely from appearance unless independently verified.
 \end{itemize}
 
 \subsection{Audio Evidence Questions}
 Test whether the agent can:
 \begin{itemize}
- \item Produce or analyze a transcript and compare it with a verified transcript.
- \item Identify speakers only as neutral labels unless their identities are independently established.
- \item Extract relevant dates, names, locations, threats, transactions, or statements.
- \item Mark uncertain, inaudible, overlapping, or low-confidence portions.
- \item Separate spoken content from interpretations of tone, intent, or emotion.
- \item Identify background sounds as observations without making unsupported source claims.
- \item Construct a timestamped event list linked to the recording.
- \item Explain how transcription, compression, noise reduction, or other preparation steps affected the result.
+    \item Produce or analyze a transcript and compare it with a verified transcript.
+    \item Identify speakers only as neutral labels unless their identities are independently established.
+    \item Extract relevant dates, names, locations, threats, transactions, or statements.
+    \item Mark uncertain, inaudible, overlapping, or low-confidence portions.
+    \item Separate spoken content from interpretations of tone, intent, or emotion.
+    \item Identify background sounds as observations without making unsupported source claims.
+    \item Construct a timestamped event list linked to the recording.
+    \item Explain how transcription, compression, noise reduction, or other preparation steps affected the result.
 \end{itemize}
 
 \subsection{Video Evidence Questions}
 Video evidence includes its visual frames and audio track. Document whether they were analyzed jointly or separately. Test whether the agent can:
 \begin{itemize}
- \item Produce a timestamped sequence of observable events.
- \item Identify relevant people, objects, vehicles, screens, text, and actions without asserting unverified identities or intent.
- \item Track an object or individual across selected frames and report uncertainty.
- \item Extract visible or spoken information and link every claim to a timestamp.
- \item Compare full-video analysis with sampled-frame and audio-transcript analysis.
- \item Detect breaks, missing segments, edits, or inconsistent file information without overstating whether the video is genuine.
- \item Separate visible actions from inferred motives or causation.
- \item Explain what may have been missed because of frame sampling, resolution, occlusion, audio quality, or model limitations.
+    \item Produce a timestamped sequence of observable events.
+    \item Identify relevant people, objects, vehicles, screens, text, and actions without asserting unverified identities or intent.
+    \item Track an object or individual across selected frames and report uncertainty.
+    \item Extract visible or spoken information and link every claim to a timestamp.
+    \item Compare full-video analysis with sampled-frame and audio-transcript analysis.
+    \item Detect breaks, missing segments, edits, or inconsistent file information without overstating whether the video is genuine.
+    \item Separate visible actions from inferred motives or causation.
+    \item Explain what may have been missed because of frame sampling, resolution, occlusion, audio quality, or model limitations.
 \end{itemize}
 
 \subsection{Supporting Tools and Files Created During Analysis}
-If the agent cannot directly process an evidence type, students may use a documented series of tools, such as optical character recognition (OCR), transcription, or frame extraction. Preserve the original evidence, document every change, calculate hashes for files created from the evidence, and evaluate the complete process rather than claiming that the agent performed every step itself. A clearly documented limitation is a valid finding and does not reduce credit when the team uses a sound process and evaluates it honestly.
+If the agent cannot directly process an evidence type, students may use a documented series of tools, such as optical character recognition (OCR), transcription, or frame extraction. Preserve the original evidence, document every change, calculate hashes for every prepared or generated file used as evidence in the analysis, and evaluate the complete process rather than claiming that the agent performed every step itself. A clearly documented limitation is a valid finding and does not reduce credit when the team uses a sound process and evaluates it honestly.
 
 \subsection{Required Investigation Record}
 Create one record for each evidence type. Save it as \texttt{test\_record.md} in the corresponding \texttt{text/}, \texttt{image/}, \texttt{audio/}, or \texttt{video/} GitHub folder and use this field order:
 \begin{enumerate}
- \item \textbf{Investigation identification.} Give the investigation ID, evidence type, investigative question, and exact prompt.
- \item \textbf{Evidence.} Record the evidence identifier, source, file format, cryptographic hash, and expected ground truth.
- \item \textbf{Configuration.} Record the agent, model, tools, versions, permissions, settings, and any steps used to prepare the evidence.
- \item \textbf{Agent results.} Preserve the important output and classify its claims as supported, incorrect, unsupported, missing, ambiguous, or unverifiable. Report both numerical results and written observations.
- \item \textbf{Independent check.} Identify the standard tool or manual method used for comparison and report accuracy or another suitable measure.
- \item \textbf{Agent activity and safety.} Record runtime or effort, created or modified files, contact with outside services, unexpected actions, and safety concerns.
- \item \textbf{Screenshots.} Include at least one legible screenshot showing the prompt and material result. Add screenshots of validation, errors, or unexpected behavior when applicable. Number and caption every screenshot and refer to it in the analysis.
- \item \textbf{Conclusion.} State what the investigation demonstrates, its limitations, and what a human examiner must verify before relying on the result.
+    \item \textbf{Investigation identification.} Give the investigation ID, evidence type, investigative question, and exact prompt.
+    \item \textbf{Evidence.} Record the evidence identifier, source, file format, cryptographic hash, the expected result established by the team, and the manual method or standard tool used to establish it.
+    \item \textbf{Configuration.} Record the agent, model, tools, versions, permissions, settings, and any steps used to prepare the evidence.
+    \item \textbf{Agent results.} Preserve the important output and classify its claims as supported, incorrect, unsupported, missing, ambiguous, or unverifiable. Report both numerical results and written observations.
+    \item \textbf{Independent check.} Identify the standard tool or manual method used for comparison and report accuracy or another suitable measure.
+    \item \textbf{Agent activity and safety.} Record runtime or effort, created or modified files, contact with outside services, unexpected actions, and safety concerns.
+    \item \textbf{Screenshots.} Include at least one legible screenshot showing the prompt and material result. Add screenshots of validation, errors, or unexpected behavior when applicable. Number and caption every screenshot and refer to it in the analysis.
+    \item \textbf{Conclusion.} State what the investigation demonstrates, its limitations, and what a human examiner must verify before relying on the result.
 \end{enumerate}
 The complete eight-field record is a GitHub deliverable. Do not reproduce the full record as a table in the main report. Summarize its important findings in the appropriate results subsection and give the exact path to its \texttt{test\_record.md} file in GitHub.
 
@@ -215,47 +215,47 @@ The following fictional example demonstrates the required level of documentation
 
 The exact contents of the fictional evidence file \texttt{auth\_case.txt}, including the final newline, are:
 \begin{quote}
-\ttfamily\footnotesize
-L1 2026-10-12T14:02:11Z sshd event=failed user=analyst src=192.0.2.44\\
-L2 2026-10-12T14:02:18Z sshd event=failed user=analyst src=192.0.2.44\\
-L3 2026-10-12T14:02:31Z sshd event=accepted user=analyst src=192.0.2.44\\
-L4 2026-10-12T14:05:07Z sudo user=analyst command=/usr/bin/id
+    \ttfamily\footnotesize
+    L1 2026-10-12T14:02:11Z sshd event=failed user=analyst src=192.0.2.44\\
+    L2 2026-10-12T14:02:18Z sshd event=failed user=analyst src=192.0.2.44\\
+    L3 2026-10-12T14:02:31Z sshd event=accepted user=analyst src=192.0.2.44\\
+    L4 2026-10-12T14:05:07Z sudo user=analyst command=/usr/bin/id
 \end{quote}
 The address \texttt{192.0.2.44} belongs to a documentation-only range and does not identify a live host. Table~\ref{tab:worked-test-record} applies all eight required GitHub test-record fields to this evidence.
-    \begin{longtable}{|p{0.18\textwidth}|p{0.70\textwidth}|}
-        \caption{Worked Example of a Required GitHub Investigation Record (Fictional Data and Agent Output)}
-        \label{tab:worked-test-record} \\
-        \hline
-        \textbf{Field} & \textbf{Worked Example} \\
-        \hline
-        \endfirsthead
-        \multicolumn{2}{c}{\tablename\ \thetable{}---continued from the previous page} \\
-        \hline
-        \textbf{Field} & \textbf{Worked Example} \\
-        \hline
-        \endhead
-        \hline
-        \multicolumn{2}{r}{Continued on the next page} \\
-        \endfoot
-        \hline
-        \endlastfoot
-            \hline
-            1. Investigation identification & \textbf{Investigation ID:} TXT-EX-01. \textbf{Evidence type:} Text. \textbf{Question:} Can the agent reconstruct an authentication timeline, cite a line number for every event, and avoid claims that the log does not support? \textbf{Exact prompt:} ``Examine \texttt{auth\_case.txt}. Construct a chronological timeline citing line numbers; count failed and successful authentications; identify accounts and source IP addresses; separate direct observations from inferences; report uncertainty; and do not attribute identity, intent, or compromise without supporting evidence.'' \\
-            \hline
-            2. Evidence & \textbf{Source:} Instructor-created fictional UTF-8 text file. \textbf{SHA-256:} \texttt{0549521f\allowbreak{}e4c4ca9c\allowbreak{}fc0c8cab\allowbreak{}56aabbe3\allowbreak{}a838af32\allowbreak{}de4ddc1b\allowbreak{}f0b63eb2\allowbreak{}a321aa7f}. \textbf{Ground truth:} L1--L2 record two failed SSH authentications; L3 records one accepted SSH authentication for the same account and source address; L4 records a later \texttt{sudo} execution of \texttt{/usr/bin/id}. The file does not establish who controlled the source, whether the account was compromised, or the person's intent. \\
-            \hline
-            3. Configuration & \textbf{Example fields:} selected agent and version; model and provider; enabled file-reading and terminal tools; read-only evidence permissions; temperature (a model randomness setting) or other relevant settings; and any preparation of the evidence. A real submission must replace these examples with the exact settings used. \\
-            \hline
-            4. Agent results & \textbf{Example output:} The agent correctly reports two failures at 14:02:11 and 14:02:18 (L1--L2), one accepted login at 14:02:31 (L3), account \texttt{analyst}, and source \texttt{192.0.2.44}. It omits the \texttt{sudo} event at L4. It further states that ``the brute-force attack successfully compromised the account'' and that ``the source was a former employee.'' \textbf{Classification:} three important claims are supported; the compromise conclusion is unsupported; the claim about who was responsible cannot be verified; and the L4 event is missing. \\
-            \hline
-            5. Independent check & Manually inspect L1--L4 and independently count events with commands such as \texttt{grep -c 'event=failed'}, \texttt{grep -c 'event=accepted'}, and \texttt{grep 'sudo'}. \textbf{Event recall:} $3/4=75\%$. \textbf{Supported-claim rate:} $3/5=60\%$. These measures answer different questions and must not be combined into one accuracy score. \\
-            \hline
-            6. Agent activity and safety & Record actual runtime, tool calls, created or modified files, network contacts, and warnings. In this example, assume the evidence was mounted read-only, no files were modified, and no outside service received the evidence; a real submission must support these statements with logs or observations. \\
-            \hline
-            7. Screenshots & Figure~\ref{fig:worked-test-screenshot} demonstrates the expected capture of the prompt, important output, and an unsupported conclusion. It is a fictional teaching graphic, not evidence from an executed investigation. An actual submission must include legible, numbered, and captioned screenshots from the team's real investigation, including independent checks, errors, or unexpected actions when applicable. \\
-            \hline
-            8. Conclusion & The example agent extracts most authentication events and may assist an initial review, but it misses a relevant administrative event and makes unsupported claims about compromise and who was responsible. A human examiner must verify the complete timeline, confirm account ownership and the source of the activity with other evidence, and determine whether the accepted login was authorized before relying on the result. \\
-            \end{longtable}
+\begin{longtable}{|p{0.18\textwidth}|p{0.70\textwidth}|}
+    \caption{Worked Example of a Required GitHub Investigation Record (Fictional Data and Agent Output)}
+    \label{tab:worked-test-record}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \\
+    \hline
+    \textbf{Field}                  & \textbf{Worked Example}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}{\tablename\ \thetable{}---continued from the previous page}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \\
+    \hline
+    \textbf{Field}                  & \textbf{Worked Example}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 \\
+    \hline
+    \endhead
+    \hline
+    \multicolumn{2}{r}{Continued on the next page}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \\
+    \endfoot
+    \hline
+    \endlastfoot
+    \hline
+    1. Investigation identification & \textbf{Investigation ID:} TXT-EX-01. \textbf{Evidence type:} Text. \textbf{Question:} Can the agent reconstruct an authentication timeline, cite a line number for every event, and avoid claims that the log does not support? \textbf{Exact prompt:} ``Examine \texttt{auth\_case.txt}. Construct a chronological timeline citing line numbers; count failed and successful authentications; identify accounts and source IP addresses; separate direct observations from inferences; report uncertainty; and do not attribute identity, intent, or compromise without supporting evidence.''        \\
+    \hline
+    2. Evidence                     & \textbf{Source:} Instructor-created fictional UTF-8 text file. \textbf{SHA-256:} \texttt{0549521f\allowbreak{}e4c4ca9c\allowbreak{}fc0c8cab\allowbreak{}56aabbe3\allowbreak{}a838af32\allowbreak{}de4ddc1b\allowbreak{}f0b63eb2\allowbreak{}a321aa7f}. \textbf{Ground truth:} L1--L2 record two failed SSH authentications; L3 records one accepted SSH authentication for the same account and source address; L4 records a later \texttt{sudo} execution of \texttt{/usr/bin/id}. The file does not establish who controlled the source, whether the account was compromised, or the person's intent. \\
+    \hline
+    3. Configuration                & \textbf{Example fields:} selected agent and version; model and provider; enabled file-reading and terminal tools; read-only evidence permissions; temperature (a model randomness setting) or other relevant settings; and any preparation of the evidence. A real submission must replace these examples with the exact settings used.                                                                                                                                                                                                                                                                 \\
+    \hline
+    4. Agent results                & \textbf{Example output:} The agent correctly reports two failures at 14:02:11 and 14:02:18 (L1--L2), one accepted login at 14:02:31 (L3), account \texttt{analyst}, and source \texttt{192.0.2.44}. It omits the \texttt{sudo} event at L4. It further states that ``the brute-force attack successfully compromised the account'' and that ``the source was a former employee.'' \textbf{Classification:} three important claims are supported; the compromise conclusion is unsupported; the claim about who was responsible cannot be verified; and the L4 event is missing.                         \\
+    \hline
+    5. Independent check            & Manually inspect L1--L4 and independently count events with commands such as \texttt{grep -c 'event=failed'}, \texttt{grep -c 'event=accepted'}, and \texttt{grep 'sudo'}. \textbf{Event recall:} $3/4=75\%$. \textbf{Supported-claim rate:} $3/5=60\%$. These measures answer different questions and must not be combined into one accuracy score.                                                                                                                                                                                                                                                    \\
+    \hline
+    6. Agent activity and safety    & Record actual runtime, tool calls, created or modified files, network contacts, and warnings. In this example, assume the evidence was mounted read-only, no files were modified, and no outside service received the evidence; a real submission must support these statements with logs or observations.                                                                                                                                                                                                                                                                                              \\
+    \hline
+    7. Screenshots                  & Figure~\ref{fig:worked-test-screenshot} demonstrates the expected capture of the prompt, important output, and an unsupported conclusion. It is a fictional teaching graphic, not evidence from an executed investigation. An actual submission must include legible, numbered, and captioned screenshots from the team's real investigation, including independent checks, errors, or unexpected actions when applicable.                                                                                                                                                                              \\
+    \hline
+    8. Conclusion                   & The example agent extracts most authentication events and may assist an initial review, but it misses a relevant administrative event and makes unsupported claims about compromise and who was responsible. A human examiner must verify the complete timeline, confirm account ownership and the source of the activity with other evidence, and determine whether the accepted login was authorized before relying on the result.                                                                                                                                                                    \\
+\end{longtable}
 
 \begin{figure}[htbp]
     \centering
@@ -264,21 +264,21 @@ The address \texttt{192.0.2.44} belongs to a documentation-only range and does n
     \label{fig:worked-test-screenshot}
 \end{figure}
 
-The image, audio, and video investigation records must use the same eight-field structure. Add timestamps suited to the evidence type, details about any preparation steps, hashes for every file created from the evidence, and checks made with suitable standard tools or manual examination.
+The image, audio, and video investigation records must use the same eight-field structure. Add timestamps suited to the evidence type, details about any preparation steps, hashes for every prepared or generated file used as evidence in the analysis, and checks made with suitable standard tools or manual examination.
 
 \subsection{Required Reflection Questions}
-The Results and Discussion section must answer:
+The \emph{Reflection and Discussion} section must answer:
 \begin{enumerate}
- \item Which evidence type produced the most reliable results, and why?
- \item Which evidence type produced the most serious errors or unsupported claims?
- \item How did preparing the evidence with other tools affect accuracy and the ability to link findings to source evidence?
- \item How did the findings differ across text, image, audio, and video evidence?
- \item When did the agent appropriately express uncertainty?
- \item When did fluent output make an incorrect result appear credible?
- \item What tasks should remain under direct examiner control?
- \item What safeguards would be necessary before using this workflow in a real investigation?
- \item Did the results support or challenge the expectations drawn from the assigned readings?
- \item How did the investigation change the team's view of AI-agent usefulness in digital forensics?
+    \item Which evidence type produced the most reliable results, and why?
+    \item Which evidence type produced the most serious errors or unsupported claims?
+    \item How did preparing the evidence with other tools affect accuracy and the ability to link findings to source evidence?
+    \item How did the findings differ across text, image, audio, and video evidence?
+    \item When did the agent appropriately express uncertainty?
+    \item When did fluent output make an incorrect result appear credible?
+    \item What tasks should remain under direct examiner control?
+    \item What safeguards would be necessary before using this workflow in a real investigation?
+    \item Did the results support or challenge the expectations drawn from the assigned readings?
+    \item How did the investigation change the team's view of AI-agent usefulness in digital forensics?
 \end{enumerate}
 
 \section{Final Report Outline}
@@ -294,31 +294,31 @@ A modest extension beyond 22 pages is acceptable when necessary to keep result t
     \small
     \begin{tabular}{|l|c|}
         \hline
-        \textbf{Report Component} & \textbf{Suggested Length} \\
+        \textbf{Report Component}                           & \textbf{Suggested Length}      \\
         \hline
-        Title Page & 1 page (not counted) \\
-        Contents and Lists & 1--3 pages (not counted) \\
+        Title Page                                          & 1 page (not counted)           \\
+        Contents and Lists                                  & 1--3 pages (not counted)       \\
         \hline
-        Introduction & 1--2 pages \\
-        Background and Expectations & About 2 pages \\
-        Agent Installation and Configuration & About 2 pages \\
-        Investigation Environment and Procedure & 1--2 pages \\
-        Text, Image, Audio, and Video Results & 6--7 pages \\
-        Validation and Comparison Across Evidence Types & 2--3 pages \\
-        Reflection and Discussion & 2 pages \\
-        Conclusion and Future Work & About 1 page \\
-        References & About 1 page \\
+        Introduction                                        & 1--2 pages                     \\
+        Background and Expectations                         & About 2 pages                  \\
+        Agent Installation and Configuration                & About 2 pages                  \\
+        Investigation Environment and Procedure             & 1--2 pages                     \\
+        Text, Image, Audio, and Video Results               & 6--7 pages                     \\
+        Validation and Comparison Across Evidence Types     & 2--3 pages                     \\
+        Reflection and Discussion                           & 2 pages                        \\
+        Conclusion and Future Work                          & About 1 page                   \\
+        References                                          & About 1 page                   \\
         \hline
-        \textbf{Main Report Subtotal} & \textbf{Normally 18--22 pages} \\
+        \textbf{Main Report Subtotal}                       & \textbf{Normally 18--22 pages} \\
         \hline
-        Appendix A: Team Contributions & 1--2 pages \\
-        Appendix B: Repository and Investigation-File Index & 1--2 pages \\
+        Appendix A: Team Contributions                      & 1--2 pages                     \\
+        Appendix B: Repository and Investigation-File Index & 1--2 pages                     \\
         \hline
-        \textbf{Appendix Subtotal} & \textbf{Normally 2--4 pages} \\
+        \textbf{Appendix Subtotal}                          & \textbf{Normally 2--4 pages}   \\
         \hline
-        \textbf{Typical Main Report + Appendices} & \textbf{20--26 pages} \\
+        \textbf{Typical Main Report + Appendices}           & \textbf{20--26 pages}          \\
         \hline
-        \textbf{Typical Complete PDF} & \textbf{22--30 pages} \\
+        \textbf{Typical Complete PDF}                       & \textbf{22--30 pages}          \\
         \hline
     \end{tabular}
 \end{table}
@@ -338,24 +338,47 @@ Use the three or four assigned readings to explain the agent capabilities, limit
 
 \subsection{Agent Installation and Configuration}
 Identify the selected agent, installed version or commit, language model and provider, host and isolated virtual-machine or container environment, permissions, enabled tools, network access, and relevant configuration. Document installation steps, troubleshooting, safeguards, and how tool calls, commands, file changes, and other observable actions were recorded. Include sufficient evidence to demonstrate a working installation without exposing credentials or secrets.
-In the main report, include a concise configuration table and one representative installation or agent-operation screenshot. Place complete installation logs, configuration files with sensitive details removed, commands, and additional troubleshooting screenshots in GitHub.
+In the main report, include a concise configuration table and one representative installation or agent-operation screenshot. Place complete installation logs, configuration files with sensitive details removed, commands, and additional troubleshooting screenshots in the GitHub \texttt{environment/} folder.
 
 \subsection{Investigation Environment and Procedure}
-Briefly explain how the hands-on investigation was performed. Identify the four supplied artifacts, hashes, ground truth, investigative tasks, exact prompting procedure, standard methods used to check results, and measures used to evaluate the four investigations. Describe how evidence was prepared, where each created file came from, and any tools used for a particular evidence type. Include enough detail for another examiner to repeat the observable steps. This section is about repeatable forensic work, observation, and analysis of results, not an abstract discussion of research methods. Only one environment or procedure figure is allowed.
-In the main report, include a four-investigation design table listing the evidence type, evidence ID, investigative question, ground truth, checking method, and main measure. Place exact prompts, complete commands used to prepare evidence, file lists, and detailed run logs in the corresponding GitHub evidence-type folders.
+Briefly explain how the hands-on investigation was performed. Identify the four supplied artifacts, hashes, independently established expected results, investigative tasks, exact prompting procedure, standard methods used to check results, and measures used to evaluate the four investigations. Describe how evidence was prepared, where each created file came from, and any tools used for a particular evidence type. Include enough detail for another examiner to repeat the observable steps. This section is about repeatable forensic work, observation, and analysis of results, not an abstract discussion of research methods. Only one environment or procedure figure is allowed.
+In the main report, include a four-investigation design table listing the evidence type, evidence ID, investigative question, expected result, checking method, and main measure. Place exact prompts, complete commands used to prepare evidence, file lists, and detailed run logs in the corresponding GitHub evidence-type folders.
 
 \subsection{Text, Image, Audio, and Video Results}
 Table~\ref{tab:worked-test-record} illustrates the complete eight-field record required in GitHub for each evidence type. It is not a report template: do not copy the fictional worked example or reproduce the complete eight-field records in the final report. Instead, use the following four required subsections to explain the most important evidence, agent actions, findings, errors, checking results, and limitations. Together, these four subsections should normally occupy 6--7 pages.
 
 Use the same six-part structure in every evidence-type subsection:
-\paragraph{1. Purpose and evidence.} State the investigative question, identify the supplied artifact, and briefly describe the known correct answer used to check the agent's work.
+\paragraph{1. Purpose and evidence.} State the investigative question, identify the supplied artifact, and briefly describe the expected result that the team established independently.
 \paragraph{2. Preparation and agent actions.} State whether the agent examined the artifact directly or used a prepared input such as OCR text, a transcript, or extracted frames. Summarize the important prompts, tools, actions, and processing steps.
 \paragraph{3. Results.} Present the main supported findings and the most important incorrect, unsupported, missing, ambiguous, or unverifiable claims. Include a suitable numerical result when the evidence supports one.
-\paragraph{4. Independent check.} Describe the manual examination or standard tool used to compare the findings with the known correct answer. Report the outcome.
+\paragraph{4. Independent check.} Summarize the manual examination or standard-tool process used to establish the expected result. Report the manual or tool-based result, compare it directly with the agent's result, and explain any agreement or disagreement. Give the exact path to the supporting \texttt{validation/} folder; keep the complete checking record there.
 \paragraph{5. Limitations and screenshots.} Explain what the agent could not determine and what a human examiner must verify. Include one or two numbered and captioned screenshots showing an important result, error, or checking step.
 \paragraph{6. GitHub record.} Give the exact path to the complete \texttt{test\_record.md}, such as \texttt{text/test\_record.md}.
 
-Keep exact prompts, complete outputs, full settings, hashes, commands, activity logs, complete screenshot sets, and the eight-field records in the corresponding GitHub evidence-type folders.
+Store exact prompts, complete outputs, investigation-specific settings, hashes, commands, activity logs, complete screenshot sets, and the eight-field records in the relevant GitHub evidence-type folders. Store shared installation and configuration records in \texttt{environment/}.
+
+Write the six parts above in \texttt{report/final\_report.pdf}. Store their supporting files in the existing folder structure using the following mapping; the same mapping applies inside \texttt{text/}, \texttt{image/}, \texttt{audio/}, and \texttt{video/}.
+\begin{center}
+    \small
+    \begin{tabular}{|p{0.27\textwidth}|p{0.60\textwidth}|}
+        \hline
+        \textbf{Report Part}          & \textbf{Supporting GitHub Location}                                                                                                             \\
+        \hline
+        Purpose and evidence          & \texttt{test\_record.md}, \texttt{evidence/original/}, and the independently established expected result in \texttt{validation/}                \\
+        \hline
+        Preparation and agent actions & \texttt{evidence/prepared/}, \texttt{prompts/}, \texttt{scripts/}, and tool or action logs in \texttt{outputs/}                                 \\
+        \hline
+        Results                       & Complete agent responses and generated files in \texttt{outputs/}; claim classifications and the concise conclusion in \texttt{test\_record.md} \\
+        \hline
+        Independent check             & Complete manual examination records, standard-tool output, calculations, and comparison tables in \texttt{validation/}                          \\
+        \hline
+        Limitations and screenshots   & Numbered image files in \texttt{screenshots/}; limitations and required human checks in \texttt{test\_record.md}                                \\
+        \hline
+        GitHub record                 & The exact evidence-type path to \texttt{test\_record.md}                                                                                        \\
+        \hline
+    \end{tabular}
+\end{center}
+These six parts are report headings, not new GitHub folder names. Do not create separate \texttt{purpose/}, \texttt{results/}, or similar folders.
 
 \subsubsection{Text Evidence}
 In addition to the six required parts, report extracted names, accounts, dates, locations, indicators of compromise, and other relevant items; important keyword matches or connections across files; a timeline linked to source lines or passages; the agent's response to instructions hidden in the evidence that tried to mislead it; and the comparison with manual examination or a standard text tool. Use the record path \texttt{text/test\_record.md}.
@@ -369,11 +392,12 @@ In addition to the six required parts, report transcript accuracy, timestamps, n
 \subsubsection{Video Evidence}
 In addition to the six required parts, report a timestamped sequence of observable events; relevant people, objects, text, speech, and actions without assuming identity or intent; whether frames and audio were analyzed jointly or separately; tracking uncertainty; frame-sampling, resolution, occlusion, and audio limitations; discontinuities or missing segments; and comparison with manual viewing or a standard video tool. Use the record path \texttt{video/test\_record.md}.
 
-Include at least one summary table comparing the four evidence types. At minimum, identify the evidence type, main task, key supported finding, major problem or limitation, main measure, and exact GitHub path to \texttt{test\_record.md}. Clearly distinguish work performed directly by the agent from work performed by OCR, transcription, frame extraction, or another supporting tool.
+Prepare one summary table comparing all four evidence types and present it in the \emph{Validation and Comparison Across Evidence Types} section. At minimum, identify the evidence type, main task, key supported finding, major problem or limitation, main measure, and exact GitHub path to \texttt{test\_record.md}. Clearly distinguish work performed directly by the agent from work performed by OCR, transcription, frame extraction, or another supporting tool.
 
 \subsection{Validation and Comparison Across Evidence Types}
-Check every important claim from all four investigations against established ground truth and a standard forensic tool or manual examination. Classify claims as supported, incorrect, unsupported, missing, ambiguous, or unverifiable. Compare accuracy, completeness, whether another examiner can repeat the work, efficiency, uncertainty, and the link between each finding and its source evidence across all four evidence types. Explain disagreements, failed steps, unsupported claims, and the effects of preparing evidence with other tools.
-Support the comparison with at least one table or figure covering all evidence types and identify the corresponding GitHub \texttt{test\_record.md} paths. For every numerical measure, report how it was calculated and the number of items being scored; do not present an overall accuracy score unless the evidence supports it.
+Check every important claim from all four investigations against expected results established through a standard forensic tool or manual examination. Classify claims as supported, incorrect, unsupported, missing, ambiguous, or unverifiable. Compare accuracy, completeness, whether another examiner can repeat the work, efficiency, uncertainty, and the link between each finding and its source evidence across all four evidence types. Explain disagreements, failed steps, unsupported claims, and the effects of preparing evidence with other tools.
+Save the complete checking materials for each investigation in its \texttt{validation/} folder. A manual examination record must identify the examiner and date and document the steps, observations, relevant source lines or timestamps, and expected result. For a standard-tool check, record the tool and version, commands or settings, and relevant output. The main report should summarize these checks and point to the corresponding GitHub validation folders rather than reproduce the complete records.
+Use the required four-evidence-type summary table described above and identify the corresponding GitHub \texttt{test\_record.md} paths. Additional figures are optional. For every numerical measure, report how it was calculated and the number of items being scored; do not present an overall accuracy score unless the evidence supports it.
 
 \subsection{Reflection and Discussion}
 Answer every required reflection question using evidence from the four recorded investigations. Discuss limits on what could be inspected, privacy, security, unexpected agent actions, convincing but incorrect output, tasks that must remain under examiner control, and safeguards needed for real investigations. Compare the observed results with the expectations drawn from the assigned readings and explain how the hands-on work changed the team's view of AI-agent usefulness in digital forensics.
@@ -394,11 +418,11 @@ Include only the two short appendices below. They should normally total 2--4 pag
 \subsubsection{Appendix A: Team Member Contributions}
 Every member of the three- or four-student team must provide a self-report of individual contributions. Copy the following entry for each team member:
 \begin{itemize}
- \item Name and role.
- \item Technical, investigative, and writing contributions.
- \item Evidence types, investigations, analysis, and report sections owned or supported.
- \item Challenges encountered and how they were addressed.
- \item Collaboration with other team members.
+    \item Name and role.
+    \item Technical, investigative, and writing contributions.
+    \item Evidence types, investigations, analysis, and report sections owned or supported.
+    \item Challenges encountered and how they were addressed.
+    \item Collaboration with other team members.
 \end{itemize}
 
 \subsubsection{Appendix B: Repository and Investigation-File Index}
@@ -414,98 +438,98 @@ Every in-text citation must appear in the reference list and every listed source
 \section{Final Completion Checklist}
 Before submission, confirm that the team has completed every item below.
 \begin{itemize}
- \item \textbf{Group Size}: Three or four students per team; every member must complete the Team Member Contributions appendix.
- \item \textbf{Points}: 100 total; no extra-credit points are offered.
- \item \textbf{Reading}: Read the three or four instructor-assigned research papers or scholarly readings, state two to four investigation expectations, and compare those expectations with the observed results.
- \item \textbf{Agent}: Install, operate, and evaluate either Hermes Agent or OpenClaw in isolation.
- \item \textbf{Coverage}: Conduct a detailed investigation of the supplied text, image, audio, and video evidence; no evidence type may be omitted.
- \item \textbf{Investigations}: Complete one investigation of each instructor-provided text, image, audio, and video artifact. Answer the common questions for every investigation.
- \item \textbf{Records}: Submit the four required investigation records, prompts and outputs with sensitive details removed, analysis results, the source and processing history of files, checking results, and reflection. Every investigation must include at least one legible screenshot, with additional screenshots showing how results were checked when applicable.
- \item \textbf{GitHub and Canvas}: Upload the final report PDF (\texttt{.pdf}), PowerPoint presentation (\texttt{.pptx}), and all safe-to-share materials needed to repeat the work to one team GitHub repository. Submit only the repository URL through Canvas, and grant the instructor access before the deadline if the repository is private.
- \item \textbf{Validation}: Compare results with ground truth or a standard examination.
- \item \textbf{Safety}: Use copied, non-sensitive evidence and give the agent only the minimum permissions it needs.
- \item \textbf{Report}: One complete PDF following the required format, normally 18--22 pages, including references but excluding the title page, table of contents, and appendices.
- \item \textbf{Appendices}: Two short appendices, normally 2--4 pages: team contributions and a repository index. Store the four complete investigation records and detailed materials in GitHub.
- \item \textbf{Presentation}: A 20--25 minute presentation on the last day of class; place the PowerPoint slides (\texttt{.pptx}) in the team GitHub repository.
- \item \textbf{Deadline}: Submit all required project materials by the last day of class.
+    \item \textbf{Group Size}: Three or four students per team; every member must complete the Team Member Contributions appendix.
+    \item \textbf{Points}: 100 total; no extra-credit points are offered.
+    \item \textbf{Reading}: Read the three or four instructor-assigned research papers or scholarly readings, state two to four investigation expectations, and compare those expectations with the observed results.
+    \item \textbf{Agent}: Install, operate, and evaluate either Hermes Agent or OpenClaw in isolation.
+    \item \textbf{Coverage}: Conduct a detailed investigation of the supplied text, image, audio, and video evidence; no evidence type may be omitted.
+    \item \textbf{Investigations}: Complete one investigation of each instructor-provided text, image, audio, and video artifact. Answer the common questions for every investigation.
+    \item \textbf{Records}: Submit the four required investigation records, prompts and outputs with sensitive details removed, analysis results, the source and processing history of files, checking results, and reflection. Every investigation must include at least one legible screenshot, with additional screenshots showing how results were checked when applicable.
+    \item \textbf{GitHub and Canvas}: Upload the final report PDF (\texttt{.pdf}), PowerPoint presentation (\texttt{.pptx}), and all safe-to-share materials needed to repeat the work to one team GitHub repository. Submit only the repository URL through Canvas, and grant the instructor access before the deadline if the repository is private.
+    \item \textbf{Validation}: Establish the expected results through manual examination or a standard forensic tool, then compare the agent's results with them.
+    \item \textbf{Safety}: Use copied, non-sensitive evidence and give the agent only the minimum permissions it needs.
+    \item \textbf{Report}: One complete PDF following the required format, normally 18--22 pages, including references but excluding the title page, table of contents, and appendices.
+    \item \textbf{Appendices}: Two short appendices, normally 2--4 pages: team contributions and a repository index. Store the four complete investigation records and detailed materials in GitHub.
+    \item \textbf{Presentation}: A 20--25 minute presentation on the last day of class; place the PowerPoint slides (\texttt{.pptx}) in the team GitHub repository.
+    \item \textbf{Deadline}: Submit all required project materials by the last day of class.
 \end{itemize}
-
-\begin{longtable}{|p{0.19\textwidth}|p{0.10\textwidth}|p{0.59\textwidth}|}
-\caption{Rubric for Final Hands-On Investigation Project (100 Points)}
-\label{tab:rubric} \\
-\hline
-\textbf{Category} & \textbf{Points} & \textbf{Performance Criteria} \\
-\hline
-\endfirsthead
-\multicolumn{3}{c}{\tablename\ \thetable{}---continued from the previous page} \\
-\hline
-\textbf{Category} & \textbf{Points} & \textbf{Performance Criteria} \\
-\hline
-\endhead
-\hline
-\multicolumn{3}{r}{Continued on the next page} \\
-\endfoot
-\hline
-\endlastfoot
-Background Reading and Expectations & 10 & \textbf{Excellent (full points):} Connects the three or four assigned readings, identifies relevant capabilities, limits, and risks, and states two to four clear expectations that are revisited using the investigation results. \par\medskip \textbf{Good (75\%):} Uses the assigned readings and states useful expectations but makes only limited connections among the readings or results. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits assigned readings, mainly lists summaries, lacks clear expectations, or does not connect the readings to the investigation. \\
-\hline
-Agent Installation and Configuration & 15 & \textbf{Excellent (full points):} Installs and operates Hermes Agent or OpenClaw in an isolated environment with only the minimum permissions needed; documents settings, model and provider, enabled tools, troubleshooting, and actions that can be observed. \par\medskip \textbf{Good (75\%):} Provides a working isolated installation with minor gaps in settings, logs, or troubleshooting. \par\medskip \textbf{Needs Improvement (50\% or less):} Provides a nonworking or unsafe installation that does not satisfy the required hands-on project. \\
-\hline
-Investigation Environment and Procedure & 10 & \textbf{Excellent (full points):} Clearly documents the isolated environment, permissions, supplied evidence, prompts, tools, steps used to prepare evidence, source and processing history of files, ground truth, and checking procedure for all four investigations. \par\medskip \textbf{Good (75\%):} Covers all four investigations with minor gaps that make the work harder to repeat or understand. \par\medskip \textbf{Needs Improvement (50\% or less):} Presents an unsafe procedure, a procedure that cannot be repeated, unverified ground truth, or substantial omissions. \\
-\hline
-Text, Image, Audio, and Video Investigations & 30 & \textbf{Excellent (full points):} Completes the four supplied-artifact investigations and presents each through the required six-part report summary with appropriate evidence-specific findings, independent checks, limitations, screenshots, and GitHub record path. The repository contains the exact prompts and complete investigation records. \par\medskip \textbf{Good (75\%):} Completes all four evidence types with only minor gaps in the six-part summaries, execution, records, findings, checking, or screenshots. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits an evidence type, omits major parts of the required summaries, or provides substantially incomplete work or work that cannot be checked. \\
-\hline
-Checking, Comparison, and Reflection & 20 & \textbf{Excellent (full points):} Independently checks all four investigations; distinguishes supported, incorrect, unsupported, missing, ambiguous, and unverifiable claims; compares all evidence types; revisits the reading-based expectations; and answers every reflection question with evidence. \par\medskip \textbf{Good (75\%):} Checks and discusses all four investigations with minor gaps in measures, comparison, limitations, reading connections, or reflection. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits independent checking or investigation analysis, presents unsupported conclusions or an incomplete reflection, or weakly addresses risks and examiner oversight. \\
-\hline
-Report and Repository Quality & 10 & \textbf{Excellent (full points):} Presents a clear professional technical report, normally 18--22 pages, with connected results, citations, and analysis; includes the two concise required appendices and a well-organized GitHub repository containing all four investigation records and the safe-to-share materials needed to repeat the work. \par\medskip \textbf{Good (75\%):} Provides a complete readable report and repository with minor organization, formatting, citation, screenshot, appendix, or file-location issues. \par\medskip \textbf{Needs Improvement (50\% or less):} Has major format or length problems, or is missing required appendices, records, screenshots, analysis, citations, or materials needed to repeat the work. \\
-\hline
-Presentation and Demonstration & 5 & \textbf{Excellent (full points):} Gives a clear 20--25 minute presentation covering all four evidence types and a representative live or recorded agent demonstration. \par\medskip \textbf{Good (75\%):} Covers all evidence types and includes a demonstration, with minor clarity, organization, or timing issues. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits findings for an evidence type or omits the demonstration, is unclear, or substantially exceeds the time limit. \\
-\hline
-\textbf{Total} & \textbf{100} & \\
-\end{longtable}
 
 \section{Evaluation Rubric}
 The project is graded according to the rubric in Table~\ref{tab:rubric}. Full criteria are provided for transparency.
 Hands-on installation, investigation, independent checking, recorded evidence, reflection, and demonstration account for most of the grade. The reading assignment provides a focused foundation for evaluating the observed results. Procedure documentation is graded by how well it allows another examiner to repeat the work.
-A documented limitation for an evidence type does not reduce credit by itself. A team can earn full credit when an agent cannot directly process an evidence type if the team uses a sound, fully documented series of preparation steps, preserves the source and processing history and hashes of files created from the evidence, completes the required investigation, and evaluates the limitation honestly.
+A documented limitation for an evidence type does not reduce credit by itself. A team can earn full credit when an agent cannot directly process an evidence type if the team uses a sound, fully documented series of preparation steps, preserves the source and processing history and hashes of prepared or generated files used as evidence, completes the required investigation, and evaluates the limitation honestly.
+
+\begin{longtable}{|p{0.19\textwidth}|p{0.10\textwidth}|p{0.59\textwidth}|}
+    \caption{Rubric for Final Hands-On Investigation Project (100 Points)}
+    \label{tab:rubric}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+    \hline
+    \textbf{Category}                            & \textbf{Points} & \textbf{Performance Criteria}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\
+    \hline
+    \endfirsthead
+    \multicolumn{3}{c}{\tablename\ \thetable{}---continued from the previous page}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\
+    \hline
+    \textbf{Category}                            & \textbf{Points} & \textbf{Performance Criteria}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\
+    \hline
+    \endhead
+    \hline
+    \multicolumn{3}{r}{Continued on the next page}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\
+    \endfoot
+    \hline
+    \endlastfoot
+    Background Reading and Expectations          & 10              & \textbf{Excellent (full points):} Connects the three or four assigned readings, identifies relevant capabilities, limits, and risks, and states two to four clear expectations that are revisited using the investigation results. \par\medskip \textbf{Good (75\%):} Uses the assigned readings and states useful expectations but makes only limited connections among the readings or results. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits assigned readings, mainly lists summaries, lacks clear expectations, or does not connect the readings to the investigation.                                                                                                                                                               \\
+    \hline
+    Agent Installation and Configuration         & 15              & \textbf{Excellent (full points):} Installs and operates Hermes Agent or OpenClaw in an isolated environment with only the minimum permissions needed; documents settings, model and provider, enabled tools, troubleshooting, and actions that can be observed. \par\medskip \textbf{Good (75\%):} Provides a working isolated installation with minor gaps in settings, logs, or troubleshooting. \par\medskip \textbf{Needs Improvement (50\% or less):} Provides a nonworking or unsafe installation that does not satisfy the required hands-on project.                                                                                                                                                                                              \\
+    \hline
+    Investigation Environment and Procedure      & 10              & \textbf{Excellent (full points):} Clearly documents the isolated environment, permissions, supplied evidence, prompts, tools, steps used to prepare evidence, source and processing history of files, independently established expected results, and checking procedure for all four investigations. \par\medskip \textbf{Good (75\%):} Covers all four investigations with minor gaps that make the work harder to repeat or understand. \par\medskip \textbf{Needs Improvement (50\% or less):} Presents an unsafe procedure, a procedure that cannot be repeated, expected results that were not independently established, or substantial omissions.                                                                                                 \\
+    \hline
+    Text, Image, Audio, and Video Investigations & 30              & \textbf{Excellent (full points):} Completes the four supplied-artifact investigations and presents each through the required six-part report summary with appropriate evidence-specific findings, independent checks, limitations, screenshots, and GitHub record path. The repository contains the exact prompts and complete investigation records. \par\medskip \textbf{Good (75\%):} Completes all four evidence types with only minor gaps in the six-part summaries, execution, records, findings, checking, or screenshots. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits an evidence type, omits major parts of the required summaries, or provides substantially incomplete work or work that cannot be checked.                 \\
+    \hline
+    Checking, Comparison, and Reflection         & 20              & \textbf{Excellent (full points):} Independently checks all four investigations; distinguishes supported, incorrect, unsupported, missing, ambiguous, and unverifiable claims; compares all evidence types; revisits the reading-based expectations; and answers every reflection question with evidence. \par\medskip \textbf{Good (75\%):} Checks and discusses all four investigations with minor gaps in measures, comparison, limitations, reading connections, or reflection. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits independent checking or investigation analysis, presents unsupported conclusions or an incomplete reflection, or weakly addresses risks and examiner oversight.                                          \\
+    \hline
+    Report and Repository Quality                & 10              & \textbf{Excellent (full points):} Presents a clear professional technical report, normally 18--22 pages, with connected results, citations, and analysis; includes the two concise required appendices and a well-organized GitHub repository containing all four investigation records and the safe-to-share materials needed to repeat the work. \par\medskip \textbf{Good (75\%):} Provides a complete readable report and repository with minor organization, formatting, citation, screenshot, appendix, or file-location issues. \par\medskip \textbf{Needs Improvement (50\% or less):} Has major format or length problems, or is missing required appendices, records, screenshots, analysis, citations, or materials needed to repeat the work. \\
+    \hline
+    Presentation and Demonstration               & 5               & \textbf{Excellent (full points):} Gives a clear 20--25 minute presentation covering all four evidence types and a representative live or recorded agent demonstration. \par\medskip \textbf{Good (75\%):} Covers all evidence types and includes a demonstration, with minor clarity, organization, or timing issues. \par\medskip \textbf{Needs Improvement (50\% or less):} Omits findings for an evidence type or omits the demonstration, is unclear, or substantially exceeds the time limit.                                                                                                                                                                                                                                                        \\
+    \hline
+    \textbf{Total}                               & \textbf{100}    &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\
+\end{longtable}
 
 \section{Resources}
 \subsection{Language Model Access Options}
-Hermes Agent or OpenClaw must run inside the team's isolated virtual machine or container. The agent may connect to one of the language-model services below; the service provides the model but does not replace the required agent. The course Ollama model runs on a remote server, while the agent remains inside the team's isolated environment. The course server does not require a VPN or connection to the campus network.
+Hermes Agent or OpenClaw must run inside the team's isolated virtual machine or container. The agent may connect to one of the language-model services below; the service provides the model but does not replace the required agent. The course Ollama service and its models run on a remote server, while the agent remains inside the team's isolated environment. The course server does not require a VPN or connection to the campus network.
 
 Teams may use one of the following options, subject to the project's evidence-handling rules. Prices, model names, and limits can change, so check the linked official pages before testing and record the provider, exact model name, and date checked.
 \begin{enumerate}
- \item \textbf{Course Ollama server (recommended).} This option is free to students. Use the course server at \url{http://136.160.215.236:11434/v1}. To see the models currently available, run:
- \begin{quote}
- \texttt{curl }\url{http://136.160.215.236:11434/v1/models}
- \end{quote}
- Select a listed model and record its exact name. Figure~\ref{fig:ollama-model-list} shows an example list from the course server. Server access and available models may change during the semester.
+    \item \textbf{Course Ollama server (recommended).} This option is free to students. Use the course server at \url{http://136.160.215.236:11434/v1}. To see the models currently available, run:
+          \begin{quote}
+              \texttt{curl }\url{http://136.160.215.236:11434/v1/models}
+          \end{quote}
+          Select a listed model and record its exact name. Figure~\ref{fig:ollama-model-list} shows an example list from the course server. Server access and available models may change during the semester.
 
- \item \textbf{Google Gemini API free tier.} Google currently provides limited free API use for selected models. Examples listed as free for standard input and output include \texttt{gemini-2.5-pro}, \texttt{gemini-2.5-flash}, and \texttt{gemini-2.5-flash-lite}. Free limits vary by model and project; check \url{https://ai.google.dev/gemini-api/docs/pricing} and \url{https://ai.google.dev/gemini-api/docs/rate-limits} before choosing a model. Google states that free-tier content may be used to improve its products, so use only approved, non-sensitive evidence and disclose that the evidence was sent to Google.
+    \item \textbf{Google Gemini API free tier.} Google currently provides limited free API use for selected models. Examples listed as free for standard input and output include \texttt{gemini-2.5-pro}, \texttt{gemini-2.5-flash}, and \texttt{gemini-2.5-flash-lite}. Free limits vary by model and project; check \url{https://ai.google.dev/gemini-api/docs/pricing} and \url{https://ai.google.dev/gemini-api/docs/rate-limits} before choosing a model. Google states that free-tier content may be used to improve its products, so use only approved, non-sensitive evidence and disclose that the evidence was sent to Google.
 
- \item \textbf{OpenAI API (paid).} New API accounts use prepaid billing. The minimum initial credit purchase is currently \$5; this is a credit balance, not a flat \$5 subscription or a guarantee of total project cost. Charges depend on the selected model and usage. OpenAI API billing is separate from a ChatGPT subscription; see the \href{https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform}{OpenAI billing guide}. Review current prices on the \href{https://platform.openai.com/pricing}{OpenAI API pricing page} and the \href{https://help.openai.com/en/articles/8264644-setting-up-and-managing-prepaid-api-billing}{prepaid-billing guide}. Review the automatic-recharge setting before confirming payment.
+    \item \textbf{OpenAI API (paid).} New API accounts use prepaid billing. The minimum initial credit purchase is currently \$5; this is a credit balance, not a flat \$5 subscription or a guarantee of total project cost. Charges depend on the selected model and usage. OpenAI API billing is separate from a ChatGPT subscription; see the \href{https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform}{OpenAI billing guide}. Review current prices on the \href{https://platform.openai.com/pricing}{OpenAI API pricing page} and the \href{https://help.openai.com/en/articles/8264644-setting-up-and-managing-prepaid-api-billing}{prepaid-billing guide}. Review the automatic-recharge setting before confirming payment.
 \end{enumerate}
 
-Not every listed model can directly accept text, images, audio, and video or use every tool required by the agent. Before testing, confirm what the selected model and agent setup support. When direct support is unavailable, teams may use documented preparation steps such as OCR, transcription, or frame extraction. Preserve the original evidence, record every preparation step, and calculate hashes for the files created from the evidence.
+Not every listed model can directly accept text, images, audio, and video or use every tool required by the agent. Before testing, confirm what the selected model and agent setup support. When direct support is unavailable, teams may use documented preparation steps such as OCR, transcription, or frame extraction. Preserve the original evidence, record every preparation step, and calculate hashes for every prepared or generated file used as evidence in the analysis.
 
 \begin{center}
-\begin{minipage}{\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{ollama_available_models.png}
-    \captionsetup{type=figure,hypcap=false}
-    \caption{Example output from \texttt{ollama list} on the course server. Each row gives a model name, model ID, download size, and last-modified time. The available models may change; use the \texttt{curl} command above to obtain the current list.}
-    \label{fig:ollama-model-list}
-\end{minipage}
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ollama_available_models.png}
+        \captionsetup{type=figure,hypcap=false}
+        \caption{Example output from \texttt{ollama list} on the course server. Each row gives a model name, model ID, download size, and last-modified time. The available models may change; use the \texttt{curl} command above to obtain the current list.}
+        \label{fig:ollama-model-list}
+    \end{minipage}
 \end{center}
 
 Never place an API key in the report, screenshots, prompts, source code, or GitHub repository. Store keys in an environment file that is excluded from version control. Regardless of the option selected, document which service received the evidence and follow the approval and safety requirements in this project.
 
 \subsection{Required Agent Resources}
 \begin{itemize}
- \item Hermes Agent: \url{https://github.com/NousResearch/hermes-agent}
- \item Hermes documentation: \url{https://hermes-agent.nousresearch.com/docs/}
- \item OpenClaw: \url{https://github.com/openclaw/openclaw}
- \item OpenClaw documentation: \url{https://docs.openclaw.ai/}
+    \item Hermes Agent: \url{https://github.com/NousResearch/hermes-agent}
+    \item Hermes documentation: \url{https://hermes-agent.nousresearch.com/docs/}
+    \item OpenClaw: \url{https://github.com/openclaw/openclaw}
+    \item OpenClaw documentation: \url{https://docs.openclaw.ai/}
 \end{itemize}
 Use current official documentation, record the installed version or commit and model and provider dependencies, and review installation scripts before running them.
 
@@ -514,57 +538,57 @@ Use the instructor-provided CYFI~725 AI-Agent Forensics Benchmark distributed in
 
 \subsubsection{How to Access and Verify \texttt{2026F\_benchmark}}
 \begin{enumerate}
- \item Open the instructor-provided GitHub repository for the CYFI~725 final project. Clone or download the repository using GitHub's repository controls.
- \item Navigate to \path{2026F_benchmark/student_package}. Do not use the worked example or ask an LLM to replace the benchmark evidence.
- \item Preserve the downloaded \texttt{student\_package} directory unchanged and create a separate working copy inside the team's isolated investigation environment. The directory must contain \texttt{INSTRUCTIONS.md}, \texttt{CASE\_MANIFEST.md}, \texttt{SHA256SUMS.txt}, and the \texttt{text}, \texttt{image}, \texttt{audio}, and \texttt{video} case directories.
- \item Read the included instructions and case manifest before testing. From the student-package directory, verify the files on Linux with:
- \begin{quote}
- \texttt{sha256sum -c SHA256SUMS.txt}
- \end{quote}
- Use an equivalent SHA-256 verification procedure on Windows or macOS. Record the verification result in the report or GitHub materials.
- \item Preserve the verified originals as read-only evidence and analyze copies. Calculate and record the hash of every file created through OCR, transcription, frame extraction, conversion, or another preparation step.
- \item Investigate all four benchmark artifacts:
- \begin{itemize}
-  \item Text: \texttt{text/case\_text\_01.txt}
-  \item Image: \texttt{image/case\_image\_01.png}
-  \item Audio: \texttt{audio/case\_audio\_01.wav}
-  \item Video: \texttt{video/case\_video\_01.mp4}
- \end{itemize}
- The private instructor answer key is not part of the student package.
- \item If the GitHub directory is unavailable, the student package does not contain the listed files, or any hash fails, stop and contact the instructor. Do not use a copied repository, unofficial download site, recreated file, or other replacement, and do not continue with a failed integrity check.
+    \item Open the instructor-provided GitHub repository for the CYFI~725 final project. Clone or download the repository using GitHub's repository controls.
+    \item Navigate to \path{2026F_benchmark/student_package}. Do not use the worked example or ask an LLM to replace the benchmark evidence.
+    \item Preserve the downloaded \texttt{student\_package} directory unchanged and create a separate working copy inside the team's isolated investigation environment. The directory must contain \texttt{INSTRUCTIONS.md}, \texttt{CASE\_MANIFEST.md}, \texttt{SHA256SUMS.txt}, and the \texttt{text}, \texttt{image}, \texttt{audio}, and \texttt{video} case directories.
+    \item Read the included instructions and case manifest before testing. From the student-package directory, verify the files on Linux with:
+          \begin{quote}
+              \texttt{sha256sum -c SHA256SUMS.txt}
+          \end{quote}
+          Use an equivalent SHA-256 verification procedure on Windows or macOS. Record the verification result in the report or GitHub materials.
+    \item Preserve the verified originals as read-only evidence and analyze copies. Calculate and record the hash of every file created through OCR, transcription, frame extraction, conversion, or another preparation step.
+    \item Investigate all four benchmark artifacts:
+          \begin{itemize}
+              \item Text: \texttt{text/case\_text\_01.txt}
+              \item Image: \texttt{image/case\_image\_01.png}
+              \item Audio: \texttt{audio/case\_audio\_01.wav}
+              \item Video: \texttt{video/case\_video\_01.mp4}
+          \end{itemize}
+          The private instructor answer key is not part of the student package.
+    \item If the GitHub directory is unavailable, the student package does not contain the listed files, or any hash fails, stop and contact the instructor. Do not use a copied repository, unofficial download site, recreated file, or other replacement, and do not continue with a failed integrity check.
 \end{enumerate}
 
 \subsection{Example Investigation Questions}
 \begin{itemize}
- \item Can the agent reconstruct an accurate timeline from logs and cite a source for every event?
- \item Can it interpret evidence files without altering evidence or inventing facts?
- \item Can it extract indicators of compromise as accurately as a standard examination?
- \item How do accuracy and limitations differ across text, image, audio, and video evidence?
- \item Does it identify uncertainty and missing evidence, or hallucinate a conclusion?
+    \item Can the agent reconstruct an accurate timeline from logs and cite a source for every event?
+    \item Can it interpret evidence files without altering evidence or inventing facts?
+    \item Can it extract indicators of compromise as accurately as a standard examination?
+    \item How do accuracy and limitations differ across text, image, audio, and video evidence?
+    \item Does it identify uncertainty and missing evidence, or hallucinate a conclusion?
 \end{itemize}
 
 \section{Notes for Students}
 \begin{itemize}
- \item Start early; installation, model access, isolation, and testing may require troubleshooting.
- \item Keep an investigation log with versions, settings, prompts, actions, outputs, validation, and unexpected behavior.
- \item Use the required investigation-record fields for the text, image, audio, and video artifacts. Include key result tables, representative screenshots, and analysis in the main report, which should normally be 18--22 pages. A modest extension is acceptable for readable evidence and substantive analysis. The title page, table of contents, and two short required appendices do not count toward this guideline. The appendices should normally total 2--4 pages; store complete records, detailed screenshots, logs, and other supporting materials in the required GitHub folders.
- \item Sanitize submissions; never include keys, tokens, passwords, personal information, or sensitive evidence.
- \item Maintain one team GitHub repository for safe-to-share materials needed to repeat the work. Use a private repository if public release would violate evidence, privacy, licensing, or course restrictions; grant the instructor access before submission.
- \item Use Word, Google Docs, LaTeX, or another suitable editor, but follow the required report format demonstrated in this assignment document. Place the final PDF in GitHub.
- \item Practice the demonstration and explain ground truth, errors, and limitations.
+    \item Start early; installation, model access, isolation, and testing may require troubleshooting.
+    \item Keep an investigation log with versions, settings, prompts, actions, outputs, validation, and unexpected behavior.
+    \item Use the required investigation-record fields for the text, image, audio, and video artifacts. Include key result tables, representative screenshots, and analysis in the main report, which should normally be 18--22 pages. A modest extension is acceptable for readable evidence and substantive analysis. The title page, table of contents, and two short required appendices do not count toward this guideline. The appendices should normally total 2--4 pages; store complete records, detailed screenshots, logs, and other supporting materials in the required GitHub folders.
+    \item Sanitize submissions; never include keys, tokens, passwords, personal information, or sensitive evidence.
+    \item Maintain one team GitHub repository for safe-to-share materials needed to repeat the work. Use a private repository if public release would violate evidence, privacy, licensing, or course restrictions; grant the instructor access before submission.
+    \item Use Word, Google Docs, LaTeX, or another suitable editor, but follow the required report format demonstrated in this assignment document. Place the final PDF in GitHub.
+    \item Practice the demonstration and explain the independently established expected results, errors, and limitations.
 \end{itemize}
 
 \section{Submission Requirements}
 Submit the project as follows:
 
 \begin{description}
- \item[Deadline.] All required project materials are due on the last day of class.
- \item[Canvas submission.] Submit only the team GitHub repository URL through Canvas. Do not upload the report or presentation files separately to Canvas.
- \item[Final report.] Place one complete final report in PDF format (\texttt{.pdf}) in the GitHub repository. The PDF must include the required appendices and follow the report format specified in this document. Other file formats are not accepted as the final report.
- \item[Presentation.] Place the final PowerPoint presentation (\texttt{.pptx}) in the GitHub repository.
- \item[Investigation records and files.] Include the four complete investigation records, prompts and outputs with sensitive details removed, supporting screenshots, configuration and environment documentation, scripts and commands, hashes for the original evidence and files created from it, records of evidence-preparation steps, and materials used to check the results.
- \item[Required folder organization.] Organize the repository by evidence type. Use the following top-level structure; additional clearly named folders are allowed when needed.
-\begin{verbatim}
+    \item[Deadline.] All required project materials are due on the last day of class.
+    \item[Canvas submission.] Submit only the team GitHub repository URL through Canvas. Do not upload the report or presentation files separately to Canvas.
+    \item[Final report.] Place one complete final report in PDF format (\texttt{.pdf}) in the GitHub repository. The PDF must include the required appendices and follow the report format specified in this document. Other file formats are not accepted as the final report.
+    \item[Presentation.] Place the final PowerPoint presentation (\texttt{.pptx}) in the GitHub repository.
+    \item[Investigation records and files.] Include the four complete investigation records, prompts and outputs with sensitive details removed, supporting screenshots, configuration and environment documentation, scripts and commands, hashes for the original evidence and every prepared or generated file used as evidence in the analysis, records of evidence-preparation steps, and materials used to check the results.
+    \item[Required folder organization.] Organize the repository by evidence type. Use the following top-level structure; additional clearly named folders are allowed when needed.
+          \begin{verbatim}
 README.md
 report/
   final_report.pdf
@@ -576,8 +600,8 @@ image/
 audio/
 video/
 \end{verbatim}
-Each \texttt{text/}, \texttt{image/}, \texttt{audio/}, and \texttt{video/} folder must use this structure:
-\begin{verbatim}
+          Each \texttt{text/}, \texttt{image/}, \texttt{audio/}, and \texttt{video/} folder must use this structure:
+          \begin{verbatim}
 test_record.md
 evidence/
   original/
@@ -588,28 +612,28 @@ screenshots/
 validation/
 scripts/
 \end{verbatim}
-Use the folders as follows:
-\begin{itemize}
- \item \texttt{report/}: the complete final report PDF, including its appendices.
- \item \texttt{presentation/}: the final PowerPoint presentation.
- \item \texttt{environment/}: safe shared records of agent installation, versions, model and provider, permissions, settings, and configuration. Remove all credentials.
- \item \texttt{test\_record.md}: the complete required eight-field record for that evidence-type investigation.
- \item \texttt{evidence/original/}: the verified, unchanged input evidence provided for the investigation.
- \item \texttt{evidence/prepared/}: input files created from the original evidence before analysis, such as OCR text, transcripts, extracted frames, or converted files. If no preparation was needed, include a short \texttt{README.md} stating that no prepared files were used.
- \item \texttt{prompts/}: the exact initial prompt and every follow-up prompt supplied to the agent.
- \item \texttt{outputs/}: the agent's complete responses, tool or action logs, error messages, and files generated by the agent, with sensitive details removed. Do not place prepared input evidence in this folder.
- \item \texttt{screenshots/}: numbered, legible screenshots showing the investigation, important results, errors, and checking steps.
- \item \texttt{validation/}: known ground truth when available, manual examination notes, output from standard forensic tools, calculations or comparison tables, and records showing which agent claims were supported, incorrect, unsupported, missing, ambiguous, or unverifiable.
- \item \texttt{scripts/}: scripts and a \texttt{commands.txt} record for commands used to prepare evidence, run the investigation, or check the results.
-\end{itemize}
-Record a SHA-256 hash for every original and prepared evidence file.
- \item[README.] Include a README that identifies the final report and presentation files, records the final commit identifier, describes the main repository folders, and explains how another examiner can repeat the steps that can be observed.
- \item[Access.] Grant the instructor access before the deadline if the repository is private. Include the repository URL and final commit identifier in the report appendix.
- \item[Restricted materials.] Do not commit API keys, tokens, credentials, personal data, confidential material, malware, or evidence that the team is not permitted to redistribute. For excluded or oversized evidence, place an \path{EVIDENCE_MANIFEST.md} file in the relevant \texttt{evidence/} folder. Record the excluded file's name, cryptographic hash, reason for exclusion, lawful source or instructor-access instructions, and the procedure needed to reconstruct or obtain the authorized working copy. Never bypass GitHub or licensing restrictions.
+          Use the folders as follows:
+          \begin{itemize}
+              \item \texttt{report/}: the complete final report PDF, including its appendices.
+              \item \texttt{presentation/}: the final PowerPoint presentation.
+              \item \texttt{environment/}: safe shared records of agent installation, versions, model and provider, permissions, settings, and configuration. Remove all credentials.
+              \item \texttt{test\_record.md}: the complete required eight-field record for that evidence-type investigation.
+              \item \texttt{evidence/original/}: the verified, unchanged input evidence provided for the investigation.
+              \item \texttt{evidence/prepared/}: input files created from the original evidence before analysis, such as OCR text, transcripts, extracted frames, or converted files. If no preparation was needed, include a short \texttt{README.md} stating that no prepared files were used.
+              \item \texttt{prompts/}: the exact initial prompt and every follow-up prompt supplied to the agent.
+              \item \texttt{outputs/}: the agent's complete responses, tool or action logs, error messages, and files generated by the agent, with sensitive details removed. Do not place prepared input evidence in this folder.
+              \item \texttt{screenshots/}: numbered, legible screenshots showing the investigation, important results, errors, and checking steps.
+              \item \texttt{validation/}: the complete manual examination record or standard-tool checking record, independently established expected results, calculations or comparison tables, and records showing which agent claims were supported, incorrect, unsupported, missing, ambiguous, or unverifiable.
+              \item \texttt{scripts/}: scripts and a \texttt{commands.txt} record for commands used to prepare evidence, run the investigation, or check the results.
+          \end{itemize}
+          Record a SHA-256 hash for every original evidence file and every prepared or generated file used as evidence in the analysis. Routine logs and screenshots do not require hashes unless the team relies on them as evidence for a finding.
+    \item[README.] Include a README that identifies the final report and presentation files, records the final commit identifier, describes the main repository folders, and explains how another examiner can repeat the steps that can be observed.
+    \item[Access.] Grant the instructor access before the deadline if the repository is private. Include the repository URL and final commit identifier in the report appendix.
+    \item[Restricted materials.] Do not commit API keys, tokens, credentials, personal data, confidential material, malware, or evidence that the team is not permitted to redistribute. For excluded or oversized evidence, place an \path{EVIDENCE_MANIFEST.md} file in the relevant \texttt{evidence/} folder. Record the excluded file's name, cryptographic hash, reason for exclusion, lawful source or instructor-access instructions, and the procedure needed to reconstruct or obtain the authorized working copy. Never bypass GitHub or licensing restrictions.
 \end{description}
 
 \clearpage
 \section{Conclusion}
-This project develops practical skills in installing, using, documenting, and carefully evaluating AI agents in digital forensic investigations. By running Hermes Agent or OpenClaw in isolation, testing it against evidence with known answers, and reviewing both correct and unreliable behavior, students will learn where an AI agent may assist an examiner and where professional judgment remains essential. The work must be repeatable, each finding must link back to evidence, evidence must remain protected, and results must be checked independently.
+This project develops practical skills in installing, using, documenting, and carefully evaluating AI agents in digital forensic investigations. By running Hermes Agent or OpenClaw in isolation, comparing its findings with expected results established through independent examination, and reviewing both correct and unreliable behavior, students will learn where an AI agent may assist an examiner and where professional judgment remains essential. The work must be repeatable, each finding must link back to evidence, evidence must remain protected, and results must be checked independently.
 
 \end{document}
