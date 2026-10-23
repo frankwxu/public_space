@@ -1,0 +1,33 @@
+{
+  "auto_install_extensions": {
+    "latex": true
+  },
+  "languages": {
+    "LaTeX": {
+      "language_servers": [
+        "!texpresso-lsp",
+        "texlab",
+        "..."
+      ]
+    }
+  },
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": true,
+            "forwardSearchAfter": false,
+            "executable": "latexmk",
+            "args": [
+              "-pdf",
+              "-interaction=nonstopmode",
+              "-synctex=1",
+              "%f"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
