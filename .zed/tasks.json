@@ -1,0 +1,18 @@
+[
+  {
+    "label": "LaTeX: Open PDF with inverse search",
+    "command": "python3",
+    "args": [
+      "$ZED_WORKTREE_ROOT/.zed/evince_inverse_search.py",
+      "$ZED_FILE",
+      "$ZED_WORKTREE_ROOT/.zed/texlab-scoped.sh inverse-search --input %f --line1 %l"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus",
+    "hide": "never",
+    "shell": "system",
+    "show_output": false
+  }
+]

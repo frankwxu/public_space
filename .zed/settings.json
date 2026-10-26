@@ -13,17 +13,30 @@
   },
   "lsp": {
     "texlab": {
+      "binary": {
+        "path": "/bin/sh",
+        "arguments": [
+          "/home/frank/public_space/.zed/texlab-scoped.sh"
+        ]
+      },
       "settings": {
         "texlab": {
           "build": {
             "onSave": true,
-            "forwardSearchAfter": false,
+            "forwardSearchAfter": true,
             "executable": "latexmk",
             "args": [
               "-pdf",
               "-interaction=nonstopmode",
               "-synctex=1",
               "%f"
+            ]
+          },
+          "forwardSearch": {
+            "executable": "python3",
+            "args": [
+              "/home/frank/public_space/.zed/latex_forward_search.py",
+              "%p"
             ]
           }
         }
